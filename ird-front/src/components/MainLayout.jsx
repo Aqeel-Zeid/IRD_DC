@@ -4,13 +4,15 @@ import Header from '../components/Header'
 
 
 export default function MainLayout(props) {
+
+   
     return (
         <div className="MainContainer">
             <div className="MainContainerSideBar">
                 <SideBar />
             </div>
             <div className="MainContainerHeader" >
-                <Header Title = "Tile" Description = "Description"   />
+                <Header Title = {props.Title} Description = {props.Description}   />
             </div>
             
             <div className="MainContainerBody">

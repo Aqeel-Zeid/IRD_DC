@@ -134,7 +134,7 @@ h1 {
 .MainContainerBody {
   padding-left: 64px;
   padding-right: 64px;
-  padding-top: 32px;
+  margin-top: 32px;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;

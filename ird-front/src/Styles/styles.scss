@@ -39,6 +39,8 @@ h1 {
   display: block;
 }
 
+
+
 .TitleDescription {
   font-weight: $normal;
   font-size: $spacingUnit * 2;
@@ -86,6 +88,6 @@ h1 {
 .MainContainerBody {
   padding-left: $spacingUnit * 8;
   padding-right: $spacingUnit * 8;
-  padding-top: $spacingUnit * 4;
+  margin-top: $spacingUnit * 4;
   grid-area: 2 / 2 / 3 / 3;
 }
