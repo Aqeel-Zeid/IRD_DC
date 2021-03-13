@@ -1,12 +1,11 @@
 import React from 'react'
 
-export default function TextInput({ ClassName, Text, Label }) {
+export default function TextInput({ ClassName, Text, Label, InputType }) {
     return (
         <div>
 
-            <label>{Label}</label>
-
-            <Text className={ClassName} placeholder="Sample Text"/>
+            <label>{Label}</label>]
+            <InputType className={ClassName} placeholder="Sample Text" value={Text}/>
         </div>
     )
 }
