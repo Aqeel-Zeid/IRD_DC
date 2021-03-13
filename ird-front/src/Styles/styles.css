@@ -68,6 +68,48 @@ h1 {
   display: block;
 }
 
+.TextArea {
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  height: 184px;
+  width: 100%;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 4px;
+  border-bottom-color: #12a2cf;
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
+.TextInput {
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  height: 48px;
+  width: 100%;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 4px;
+  border-bottom-color: #12a2cf;
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
 .TitleDescription {
   font-weight: 400;
   font-size: 16px;

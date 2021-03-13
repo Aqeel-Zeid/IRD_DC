@@ -17,7 +17,8 @@ const Template = (args) =>
 export const MainLayoutDefault = Template.bind({});
 
 MainLayoutDefault.args = {
-
+  Title: "Title",
+  Description: "Content"
 };
 
 

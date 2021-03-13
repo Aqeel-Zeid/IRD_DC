@@ -10,6 +10,7 @@ $color-background-extra-dark: #000000;
 $color-background-dark: #2b2b2b;
 $color-background-light: #f5f5f5;
 $color-text: #ffffff;
+$color-textInputField: rgba(0, 0, 0, 0.25);
 
 //Typography
 $font-family: "Inter", sans-serif;
@@ -39,7 +40,51 @@ h1 {
   display: block;
 }
 
+.TextArea {
+  padding-left: $spacingUnit ;
+  padding-top: $spacingUnit ;
+  padding-bottom: $spacingUnit ;
+  padding-right: $spacingUnit ;
+  color: $color-text;
+  font-family: $font-family;
+  // border-bottom: $color-primary;
+  // border-bottom-width: 10;
+  height: $spacingUnit * 23;
+  width: 100%;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: $spacingUnit/2;
+  border-bottom-color: $color-primary;
+  margin-top: $spacingUnit * 2;
+  font-weight: $normal;
+  font-size: $spacingUnit * 1.75;
+  background-color: $color-textInputField;
+  display: block;
+}
 
+.TextInput {
+  padding-left: $spacingUnit ;
+  padding-top: $spacingUnit ;
+  padding-bottom: $spacingUnit ;
+  padding-right: $spacingUnit ;
+  color: $color-text;
+  font-family: $font-family;
+  // border-bottom: $color-primary;
+  // border-bottom-width: 10;
+  height: $spacingUnit * 6;
+  width: 100%;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: $spacingUnit/2;
+  border-bottom-color: $color-primary;
+  margin-top: $spacingUnit * 2;
+  font-weight: $normal;
+  font-size: $spacingUnit * 1.75;
+  background-color: $color-textInputField;
+  display: block;
+}
 
 .TitleDescription {
   font-weight: $normal;
