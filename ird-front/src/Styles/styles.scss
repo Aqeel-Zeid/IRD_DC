@@ -205,3 +205,24 @@ h2 {
   justify-content: flex-start;
   margin-top: $spacingUnit * 4;
 }
+
+
+.PaginationProgressContainer{
+ 
+  div{
+    height: $spacingUnit * 3;
+    width: $spacingUnit * 3;
+    background-color: $color-accent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: $spacingUnit;
+    margin-right: $spacingUnit;
+  }
+
+  .PaginationProgressActive{
+    background-color: $color-primary;
+  }
+  .PaginationProgressPassive{
+    background-color: $color-accent;
+  }
+}
