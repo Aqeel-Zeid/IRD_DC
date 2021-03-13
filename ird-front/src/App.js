@@ -1,12 +1,45 @@
 import MainLayout from "./components/MainLayout";
 import "./Styles/styles.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch , useParams , useRouteMatch, } from "react-router-dom";
 import QExplorer from "./components/Pages/QExplorer";
 
 function App() {
+
   return (
     <Router>
       <Switch>
+      <Route path = "/CQ/QuestionaireEditor">
+          <MainLayout
+              Title= "Questionaire Editor"
+              Description=""
+            >
+              
+            </MainLayout>
+        </Route>
+      <Route path = "/CQ/CreateRespondentCode">
+          <MainLayout
+              Title="Create New Respondent Code"
+              Description="Define the format of a respondent code and how to use it"
+            >
+              
+            </MainLayout>
+        </Route>
+      <Route path = "/CQ/SelectRespondentCode">
+          <MainLayout
+              Title="Select Respondent Code"
+              Description="Respondent code uniquely identifies each response of a questionaire"
+            >
+              
+            </MainLayout>
+        </Route>
+        <Route path = "/CQ/GeneralInformation">
+          <MainLayout
+              Title="Create Questionaire"
+              Description="General Infromation"
+            >
+              
+            </MainLayout>
+        </Route>
         <Route path="/Questionnaires">
           <MainLayout
             Title="Questionnaires Explorer"
