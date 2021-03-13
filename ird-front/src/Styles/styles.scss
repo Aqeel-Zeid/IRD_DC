@@ -281,10 +281,14 @@ h2 {
 
     padding: $spacingUnit * 2;
     padding-bottom: $spacingUnit * 6;
+    padding-top: $spacingUnit * 4;
+
     border-style: dashed;
     border-color: $color-accent;
     border-width: $spacingUnit * 0.25;
     border-radius: $spacingUnit * 2;
+
+    margin-bottom: $spacingUnit * 4;
 
 }
 
@@ -293,9 +297,10 @@ h2 {
     background-color: $color-background-light;
     display: flex;
     align-content: center;
-    padding: $spacingUnit * 2 ;
+    padding: $spacingUnit * 1.5 ;
     justify-content: space-between;
     
+    margin-top: $spacingUnit * 2;
 
     label{
         position: relative;
@@ -306,4 +311,32 @@ h2 {
         padding-left: $spacingUnit * 2;
     }
     
+}
+
+.QCardArrayContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: $spacingUnit * 4;
+}
+
+
+.PaginationProgressContainer{
+ 
+  div{
+    height: $spacingUnit * 3;
+    width: $spacingUnit * 3;
+    background-color: $color-accent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: $spacingUnit;
+    margin-right: $spacingUnit;
+  }
+
+  .PaginationProgressActive{
+    background-color: $color-primary;
+  }
+  .PaginationProgressPassive{
+    background-color: $color-accent;
+  }
 }

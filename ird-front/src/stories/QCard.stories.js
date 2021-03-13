@@ -1,6 +1,4 @@
 import React from 'react';
-
-import NewQuestionaireButton from '../components/NewQuestionaireButton';
 import QCard from '../components/QCard';
 
 export default {
