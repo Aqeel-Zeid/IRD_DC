@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+html {
+  height: 10vh;
+}
+
+body {
+  background-color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  height: 10vh;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  display: block;
+}
+
+.TitleDescription {
+  font-weight: 400;
+  font-size: 16px;
+  color: #c4c4c4;
+  display: block;
+}
+
+.SideBarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 5vw;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+  padding: 8px;
+}
+
+.SideBarIcon {
+  max-width: 64px;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.MainContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 11fr;
+      grid-template-columns: 1fr 11fr;
+  -ms-grid-rows: 5vw 100%;
+      grid-template-rows: 5vw 100%;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.MainContainerSideBar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.MainContainerHeader {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 8px;
+}
+
+.MainContainerBody {
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 32px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+/*# sourceMappingURL=styles.css.map */
