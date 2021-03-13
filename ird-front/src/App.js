@@ -1,6 +1,7 @@
 import MainLayout from "./components/MainLayout";
 import "./Styles/styles.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import QExplorer from "./components/Pages/QExplorer";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
             Title="Questionnaires Explorer"
             Description="View All Questionnaire templates"
           >
-            Questionnaires Explorer
+            <QExplorer/>
           </MainLayout>
         </Route>
         <Route path="/">
@@ -19,7 +20,7 @@ function App() {
             Title="Questionaires Explorer"
             Description="View All Questionnaire templates"
           >
-            Questionnaires Explorer
+             <QExplorer/>
           </MainLayout>
         </Route>
       </Switch>

@@ -10,6 +10,7 @@ $color-background-extra-dark: #000000;
 $color-background-dark: #2b2b2b;
 $color-background-light: #f5f5f5;
 $color-text: #ffffff;
+$color-text-dark: #000000;
 
 //Typography
 $font-family: "Inter", sans-serif;
@@ -39,6 +40,13 @@ h1 {
   display: block;
 }
 
+h2 {
+    font-weight: $semibold;
+    font-size: $spacingUnit * 3;
+    line-height: $spacingUnit * 4;
+    display: block;
+  }
+
 
 
 .TitleDescription {
@@ -47,6 +55,13 @@ h1 {
   color: $color-accent;
   display: block;
 }
+
+.bodyText{
+    font-weight: 600;
+    font-size: $spacingUnit * 2;
+    display: block;
+}
+
 
 .SideBarContainer {
   display: flex;
@@ -90,4 +105,46 @@ h1 {
   padding-right: $spacingUnit * 8;
   margin-top: $spacingUnit * 4;
   grid-area: 2 / 2 / 3 / 3;
+}
+
+
+
+.NewQuestionaireButtonContainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: $spacingUnit * 24;
+        padding-bottom: $spacingUnit * 2;
+    }
+
+    padding: $spacingUnit * 2;
+    padding-bottom: $spacingUnit * 6;
+    border-style: dashed;
+    border-color: $color-accent;
+    border-width: $spacingUnit * 0.25;
+    border-radius: $spacingUnit * 2;
+
+}
+
+.QcardContainer{
+    color: $color-text-dark;
+    background-color: $color-background-light;
+    display: flex;
+    align-content: center;
+    padding: $spacingUnit * 2 ;
+    justify-content: space-between;
+    
+
+    label{
+        position: relative;
+        top : $spacingUnit
+    }
+
+    img{
+        padding-left: $spacingUnit * 2;
+    }
+    
 }

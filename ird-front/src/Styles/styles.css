@@ -68,10 +68,23 @@ h1 {
   display: block;
 }
 
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  display: block;
+}
+
 .TitleDescription {
   font-weight: 400;
   font-size: 16px;
   color: #c4c4c4;
+  display: block;
+}
+
+.bodyText {
+  font-weight: 600;
+  font-size: 16px;
   display: block;
 }
 
@@ -140,5 +153,55 @@ h1 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 2 / 2 / 3 / 3;
+}
+
+.NewQuestionaireButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+  padding-bottom: 48px;
+  border-style: dashed;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-radius: 16px;
+}
+
+.NewQuestionaireButtonContainer img {
+  max-width: 192px;
+  padding-bottom: 16px;
+}
+
+.QcardContainer {
+  color: #000000;
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.QcardContainer label {
+  position: relative;
+  top: 8px;
+}
+
+.QcardContainer img {
+  padding-left: 16px;
 }
 /*# sourceMappingURL=styles.css.map */
