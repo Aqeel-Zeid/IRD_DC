@@ -75,44 +75,159 @@ h2 {
   display: block;
 }
 
+.ButtonPrimary {
+  background-color: #12a2cf;
+  color: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  width: 360px;
+}
+
+.ButtonSecondary {
+  background-color: #aaaaaa;
+  color: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  width: 360px;
+}
+
+.ButtonDisabled {
+  background-color: #f5f5f5;
+  color: #aaaaaa;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  width: 360px;
+}
+
+.CheckboxChecked {
+  background-color: #12a2cf;
+  padding: 8px;
+  margin-right: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.CheckboxUnchecked {
+  background-color: #12a2cf;
+  padding: 8px;
+  margin-right: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.CheckboxDisabled {
+  background-color: #12a2cf;
+  padding: 16px;
+  margin-right: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.CheckedLabel {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.UncheckedLabel {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.CheckboxDisabledLabel {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.HorizontalDivider {
+  border: 0;
+  border-top: 3px solid #12a2cf;
+  width: 50%;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.VerticalDivider {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 0;
+  border-top: 100vh solid #12a2cf;
+  width: 3px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.HorizontalDividerLabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.VerticalDividerLabel {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .TextArea {
-  padding-left: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 8px;
+  padding: 8px;
   color: #ffffff;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   height: 184px;
   width: 100%;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-right-width: 0;
   border-bottom-width: 4px;
   border-bottom-color: #12a2cf;
   margin-top: 16px;
-  font-weight: 400;
-  font-size: 14px;
   background-color: rgba(0, 0, 0, 0.25);
   display: block;
 }
 
 .TextInput {
-  padding-left: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 8px;
+  padding: 8px;
   color: #ffffff;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   height: 48px;
   width: 100%;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-right-width: 0;
+  border-width: 0;
   border-bottom-width: 4px;
   border-bottom-color: #12a2cf;
   margin-top: 16px;
-  font-weight: 400;
-  font-size: 14px;
   background-color: rgba(0, 0, 0, 0.25);
   display: block;
 }

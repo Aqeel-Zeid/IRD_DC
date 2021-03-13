@@ -48,48 +48,162 @@ h2 {
     display: block;
   }
 
+.ButtonPrimary {
+  background-color: $color-primary;
+  color: $color-text;
+  padding-top: $spacingUnit *1.5;
+  padding-bottom: $spacingUnit *1.5;
+  padding-left: $spacingUnit *10;
+  padding-right: $spacingUnit *10;
+  font-family: $font-family;
+  font-size: $spacingUnit * 3;
+  font-weight: bold;
+  width: $spacingUnit * 45;
+}
+
+.ButtonSecondary {
+  background-color: $color-secondary;
+  color: $color-text;
+  padding-top: $spacingUnit *1.5;
+  padding-bottom: $spacingUnit *1.5;
+  padding-left: $spacingUnit *10;
+  padding-right: $spacingUnit *10;
+  font-family: $font-family;
+  font-size: $spacingUnit * 3;
+  font-weight: bold;
+  width: $spacingUnit * 45;
+}
+
+.ButtonDisabled {
+  background-color: $color-background-light;
+  color: $color-secondary;
+  padding-top: $spacingUnit *1.5;
+  padding-bottom: $spacingUnit *1.5;
+  padding-left: $spacingUnit *10;
+  padding-right: $spacingUnit *10;
+  font-family: $font-family;
+  font-size: $spacingUnit * 3;
+  font-weight: bold;
+  width: $spacingUnit * 45;
+}
+
+.CheckboxChecked {
+  background-color: $color-primary;
+  padding: $spacingUnit  ;
+  margin-right: $spacingUnit * 2;
+  font-family: $font-family;
+  font-size: $spacingUnit * 3;
+  font-weight: normal;
+}
+
+.CheckboxUnchecked {
+  background-color: $color-primary;
+  padding: $spacingUnit  ;
+  margin-right: $spacingUnit * 2;
+  font-family: $font-family;
+  font-size: $spacingUnit * 3;
+  font-weight: normal;
+}
+
+.CheckboxDisabled {
+  background-color: $color-primary;
+  padding: $spacingUnit * 2 ;
+  margin-right: $spacingUnit * 2;
+  font-family: $font-family;
+  font-size: $spacingUnit * 3;
+  font-weight: normal;
+}
+
+.CheckedLabel {
+  position:relative;
+  font-family: $font-family;
+  font-size: $spacingUnit*2;
+}
+
+.UncheckedLabel {
+  position:relative;
+  font-family: $font-family;
+  font-size: $spacingUnit*2;
+  display:inline-block;
+}
+
+.CheckboxDisabledLabel {
+  font-family: $font-family;
+  font-size: $spacingUnit *2;
+}
+
+.HorizontalDivider {
+  // flex-direction: row;
+  border: 0;
+  border-top: 3px solid $color-primary;
+  width: 50%;
+  margin-left: $spacingUnit * 2;
+  margin-right: $spacingUnit * 2;
+}
+
+.VerticalDivider {
+  flex-direction: column;
+  border: 0;
+  border-top: 100vh solid $color-primary;
+  width: 3px;
+  // height: 100vh;
+  margin-left: $spacingUnit * 2;
+  margin-right: $spacingUnit * 2;
+  // border: 0;
+  // border-left: 6px solid $color-primary ;
+  // height: 500px;
+  // position: absolute;
+  // left: 50%;
+  // margin-left: -3px;
+  // top: 0;
+}
+
+.HorizontalDividerLabel {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: $font-family;
+  font-weight: bold;
+  font-size: $spacingUnit * 3;
+}
+
+.VerticalDividerLabel {
+  // display: flex;
+  // flex-direction: column;
+  align-items: center;
+  // text-align: center;
+  font-family: $font-family;
+  font-weight: bold;
+  font-size: $spacingUnit * 3;
+}
+
 .TextArea {
-  padding-left: $spacingUnit ;
-  padding-top: $spacingUnit ;
-  padding-bottom: $spacingUnit ;
-  padding-right: $spacingUnit ;
+  padding: $spacingUnit;
   color: $color-text;
   font-family: $font-family;
-  // border-bottom: $color-primary;
-  // border-bottom-width: 10;
+  font-weight: $normal;
+  font-size: $spacingUnit * 2;
   height: $spacingUnit * 23;
   width: 100%;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: $spacingUnit/2;
+  border-bottom-width: $spacingUnit / 2;
   border-bottom-color: $color-primary;
   margin-top: $spacingUnit * 2;
-  font-weight: $normal;
-  font-size: $spacingUnit * 1.75;
   background-color: $color-textInputField;
   display: block;
 }
 
 .TextInput {
-  padding-left: $spacingUnit ;
-  padding-top: $spacingUnit ;
-  padding-bottom: $spacingUnit ;
-  padding-right: $spacingUnit ;
+  padding: $spacingUnit;
   color: $color-text;
   font-family: $font-family;
-  // border-bottom: $color-primary;
-  // border-bottom-width: 10;
+  font-weight: $normal;
+  font-size: $spacingUnit * 2;
   height: $spacingUnit * 6;
   width: 100%;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: $spacingUnit/2;
+  border-width: 0;
+  border-bottom-width: $spacingUnit / 2;
   border-bottom-color: $color-primary;
   margin-top: $spacingUnit * 2;
-  font-weight: $normal;
-  font-size: $spacingUnit * 1.75;
   background-color: $color-textInputField;
   display: block;
 }
