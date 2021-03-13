@@ -51,40 +51,43 @@ h2 {
 .ButtonPrimary {
   background-color: $color-primary;
   color: $color-text;
+  border-width: 0;
   padding-top: $spacingUnit *1.5;
   padding-bottom: $spacingUnit *1.5;
   padding-left: $spacingUnit *10;
   padding-right: $spacingUnit *10;
   font-family: $font-family;
-  font-size: $spacingUnit * 3;
+  font-size: $spacingUnit * 2;
   font-weight: bold;
-  width: $spacingUnit * 45;
+  width: 100%;
 }
 
 .ButtonSecondary {
   background-color: $color-secondary;
   color: $color-text;
+  border-width: 0;
   padding-top: $spacingUnit *1.5;
   padding-bottom: $spacingUnit *1.5;
   padding-left: $spacingUnit *10;
   padding-right: $spacingUnit *10;
   font-family: $font-family;
-  font-size: $spacingUnit * 3;
+  font-size: $spacingUnit * 2;
   font-weight: bold;
-  width: $spacingUnit * 45;
+  width: 100%;
 }
 
 .ButtonDisabled {
   background-color: $color-background-light;
   color: $color-secondary;
+  border-width: 0;
   padding-top: $spacingUnit *1.5;
   padding-bottom: $spacingUnit *1.5;
   padding-left: $spacingUnit *10;
   padding-right: $spacingUnit *10;
   font-family: $font-family;
-  font-size: $spacingUnit * 3;
+  font-size: $spacingUnit * 2;
   font-weight: bold;
-  width: $spacingUnit * 45;
+  width: 100%;
 }
 
 .CheckboxChecked {
@@ -107,7 +110,7 @@ h2 {
 
 .CheckboxDisabled {
   background-color: $color-primary;
-  padding: $spacingUnit * 2 ;
+  padding: $spacingUnit  ;
   margin-right: $spacingUnit * 2;
   font-family: $font-family;
   font-size: $spacingUnit * 3;
@@ -115,16 +118,15 @@ h2 {
 }
 
 .CheckedLabel {
-  position:relative;
+  // position:relative;
   font-family: $font-family;
   font-size: $spacingUnit*2;
 }
 
 .UncheckedLabel {
-  position:relative;
+  // position:relative;
   font-family: $font-family;
   font-size: $spacingUnit*2;
-  display:inline-block;
 }
 
 .CheckboxDisabledLabel {
@@ -185,6 +187,7 @@ h2 {
   font-size: $spacingUnit * 2;
   height: $spacingUnit * 23;
   width: 100%;
+  border-width: 0;
   border-bottom-width: $spacingUnit / 2;
   border-bottom-color: $color-primary;
   margin-top: $spacingUnit * 2;
@@ -239,6 +242,33 @@ h2 {
   max-width: $spacingUnit * 8;
   padding: $spacingUnit * 1;
   margin-bottom: $spacingUnit * 2;
+}
+
+.RespondentFormatContainer {
+  margin-top: $spacingUnit * 6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.RespondentFormatLeft {
+  // height: 100vh;
+  border: 1px solid $color-primary;
+  padding: $spacingUnit *3;
+  padding-bottom: $spacingUnit * 8;
+  margin-right: $spacingUnit * 3;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.RespondentFormatRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // height: 100vh;
+  margin-left: $spacingUnit * 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .MainContainer {

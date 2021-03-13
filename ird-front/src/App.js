@@ -2,6 +2,8 @@ import MainLayout from "./components/MainLayout";
 import "./Styles/styles.css";
 import { BrowserRouter as Router, Route, Switch , useParams , useRouteMatch, } from "react-router-dom";
 import QExplorer from "./components/Pages/QExplorer";
+import QGeneralInfo from "./components/Pages/QGeneralInfo";
+import QRespondentFormat from "./components/Pages/QRespondentFormat";
 
 function App() {
 
@@ -21,7 +23,7 @@ function App() {
               Title="Create New Respondent Code"
               Description="Define the format of a respondent code and how to use it"
             >
-              
+              <QRespondentFormat></QRespondentFormat>
             </MainLayout>
         </Route>
       <Route path = "/CQ/SelectRespondentCode">
@@ -37,6 +39,12 @@ function App() {
               Title="Create Questionaire"
               Description="General Infromation"
             >
+              <QGeneralInfo
+                ClassName = "TextInput"
+                Label = "Sample"
+                InputType = "input"
+              >
+              </QGeneralInfo>
               
             </MainLayout>
         </Route>
