@@ -47,6 +47,7 @@ function App() {
             <QuestionFormat></QuestionFormat>
           </MainLayout>
         </Route>
+<<<<<<< HEAD
         <Route path="/CQ/QT/CreateTextQuestion">
           <MainLayout
             Title="Create New Text Question"
@@ -63,6 +64,8 @@ function App() {
             <ChoiceQuestion></ChoiceQuestion>
           </MainLayout>
         </Route>
+=======
+>>>>>>> 4238e2526a91920d1c6aaf6eb717ee8c2303cb85
         <Route path="/CQ/QuestionaireEditor">
           <MainLayout Title="Questionaire Editor" Description=""></MainLayout>
         </Route>
