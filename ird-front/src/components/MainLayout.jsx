@@ -1,25 +1,18 @@
-import React from 'react'
-import SideBar from '../components/Sidebar'
-import Header from '../components/Header'
-
+import React from "react";
+import SideBar from "../components/Sidebar";
+import Header from "../components/Header";
 
 export default function MainLayout(props) {
+  return (
+    <div className="MainContainer" style={{ backgroundColor: props.bgColor }}>
+      <div className="MainContainerSideBar" style={{ backgroundColor: props.bgColor }}>
+        <SideBar />
+      </div>
+      <div className="MainContainerHeader" style={{ backgroundColor: props.bgColor }}>
+        <Header Title={props.Title} Description={props.Description} />
+      </div>
 
-   
-    return (
-        <div className="MainContainer">
-            <div className="MainContainerSideBar">
-                <SideBar />
-            </div>
-            <div className="MainContainerHeader" >
-                <Header Title = {props.Title} Description = {props.Description}   />
-            </div>
-            
-            <div className="MainContainerBody">
-                {
-                   props.children
-                }
-            </div>
-        </div>
-    )
+      <div className="MainContainerBody" style={{ backgroundColor: props.bgColor }}>{props.children}</div>
+    </div>
+  );
 }
