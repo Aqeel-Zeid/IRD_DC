@@ -15,8 +15,8 @@ export const TextInputDefault = Template.bind({});
 TextInputDefault.args = {
   Label: "Sample Text",
   ClassName : "TextInput",
-  Text : "",
-  InputType: "input"
+  InputType: "input",
+  PlaceHolder: "Something"
 };
 
 export const TextInputMultipleLine = Template.bind({});
@@ -24,6 +24,6 @@ export const TextInputMultipleLine = Template.bind({});
 TextInputMultipleLine.args = {
     Label: "Sample Text",
     ClassName : "TextArea",
-    Text : "",
-    InputType: "textarea"
+    InputType: "textarea",
+    PlaceHolder: "Something"
 };
