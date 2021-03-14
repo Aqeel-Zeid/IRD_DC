@@ -10,11 +10,44 @@ import {
 import QExplorer from "./components/Pages/QExplorer";
 import QGeneralInfo from "./components/Pages/QGeneralInfo";
 import QRespondentFormat from "./components/Pages/QRespondentFormat";
+import AddQuestion from "./components/Pages/AddQuestion";
+import CreateQuestion from "./components/Pages/CreateQuestion";
+import QuestionFormat from "./components/Pages/QuestionFormat";
 
 function App() {
   return (
     <Router>
       <Switch>
+<<<<<<< HEAD
+        <Route path="/CQAQ/AddQuestion">
+          <MainLayout
+            bgColor="black"
+            Title="Add A Question"
+            Description="Select the type of question"
+          >
+            <AddQuestion></AddQuestion>
+          </MainLayout>
+        </Route>
+        <Route path="/CQAQ/CreateQuestion">
+          <MainLayout
+            bgColor="black"
+            Title="Create New Question"
+            Description="Select the type of question"
+          >
+            <CreateQuestion></CreateQuestion>
+          </MainLayout>
+        </Route>
+        <Route path="/CQAQ/QuestionFormat">
+          <MainLayout
+            bgColor="black"
+            Title="Pick A Question Format"
+            Description="Select the type of question"
+          >
+            <QuestionFormat></QuestionFormat>
+          </MainLayout>
+        </Route>
+=======
+>>>>>>> d39b97d11f9515694af5adaa3b52ed4b80015ae1
         <Route path="/CQ/QuestionaireEditor">
           <MainLayout Title="Questionaire Editor" Description=""></MainLayout>
         </Route>
