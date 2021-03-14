@@ -12,13 +12,7 @@ const Template = (args) => <Checkbox {...args} />;
 export const Checked = Template.bind({});
 
 Checked.args = {
-  Text: "Checked"
-};
-
-export const Unchecked = Template.bind({});
-
-Unchecked.args = {
-  Text: "Unchecked"
+  Text: "Click"
 };
 
 export const Disabled = Template.bind({});
