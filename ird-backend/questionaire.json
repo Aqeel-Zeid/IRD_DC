@@ -1,0 +1,36 @@
+{
+  "questionaireName": "",
+  "created_date": "",
+  "qid": "",
+  "description": "",
+  "public_key" : "",
+  "sections": [
+    {
+      "section_name": "",
+      "is_skip_logic": "",
+      "description": "",
+      "order": "",
+      "questions": [
+        {
+          "label": "",
+          "type": "",
+          "order": "",
+          "is_multi_part": "",
+          "column_variable_name": "",
+          "answer_hint": "",
+          "not_mandotary": "",
+          "no_special_chars": "",
+          "min_value": "",
+          "max_value": "",
+          "choices": [
+            {
+              "choice_name": "",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+     

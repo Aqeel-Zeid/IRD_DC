@@ -18,8 +18,7 @@ function App() {
   return (
     <Router>
       <Switch>
-<<<<<<< HEAD
-        <Route path="/CQAQ/AddQuestion">
+        <Route path="/CQ/AQ/AddQuestion">
           <MainLayout
             bgColor="black"
             Title="Add A Question"
@@ -28,7 +27,7 @@ function App() {
             <AddQuestion></AddQuestion>
           </MainLayout>
         </Route>
-        <Route path="/CQAQ/CreateQuestion">
+        <Route path="/CQ/AQ/CreateQuestion">
           <MainLayout
             bgColor="black"
             Title="Create New Question"
@@ -37,7 +36,7 @@ function App() {
             <CreateQuestion></CreateQuestion>
           </MainLayout>
         </Route>
-        <Route path="/CQAQ/QuestionFormat">
+        <Route path="/CQ/AQ/QuestionFormat">
           <MainLayout
             bgColor="black"
             Title="Pick A Question Format"
@@ -46,8 +45,6 @@ function App() {
             <QuestionFormat></QuestionFormat>
           </MainLayout>
         </Route>
-=======
->>>>>>> d39b97d11f9515694af5adaa3b52ed4b80015ae1
         <Route path="/CQ/QuestionaireEditor">
           <MainLayout Title="Questionaire Editor" Description=""></MainLayout>
         </Route>
