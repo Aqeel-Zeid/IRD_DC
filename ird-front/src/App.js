@@ -18,6 +18,7 @@ function App() {
   return (
     <Router>
       <Switch>
+<<<<<<< HEAD
         <Route path="/CQAQ/AddQuestion">
           <MainLayout
             bgColor="black"
@@ -45,6 +46,8 @@ function App() {
             <QuestionFormat></QuestionFormat>
           </MainLayout>
         </Route>
+=======
+>>>>>>> d39b97d11f9515694af5adaa3b52ed4b80015ae1
         <Route path="/CQ/QuestionaireEditor">
           <MainLayout Title="Questionaire Editor" Description=""></MainLayout>
         </Route>
