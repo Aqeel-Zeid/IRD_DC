@@ -75,6 +75,27 @@ h2 {
   display: block;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  display: block;
+}
+
+.TitleDescription {
+  font-weight: 400;
+  font-size: 16px;
+  color: #c4c4c4;
+  display: block;
+  line-height: 20px;
+}
+
+.bodyText {
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+}
+
 .ButtonPrimary {
   background-color: #12a2cf;
   color: #ffffff;
@@ -144,8 +165,8 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 17px;
+  width: 17px;
   background-color: #eee;
 }
 
@@ -173,10 +194,10 @@ h2 {
 
 /* Style the checkmark/indicator */
 .CheckboxContainer .checkmark:after {
-  left: 7px;
-  top: 4px;
+  left: 6px;
+  top: 3px;
   width: 5px;
-  height: 10px;
+  height: 9px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -197,7 +218,7 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 0;
-  border-top: 100vh solid #12a2cf;
+  border-top: 30vh solid #12a2cf;
   width: 3px;
   margin-left: 16px;
   margin-right: 16px;
@@ -254,19 +275,6 @@ h2 {
   border-bottom-color: #12a2cf;
   margin-top: 16px;
   background-color: rgba(0, 0, 0, 0.25);
-  display: block;
-}
-
-.TitleDescription {
-  font-weight: 400;
-  font-size: 16px;
-  color: #c4c4c4;
-  display: block;
-}
-
-.bodyText {
-  font-weight: 600;
-  font-size: 16px;
   display: block;
 }
 
@@ -339,6 +347,63 @@ h2 {
   grid-area: 1 / 2 / 2 / 3;
 }
 
+.TextQuestionContainer {
+  margin-top: 48px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.TextQuestionLeft {
+  border-right: 1px solid #12a2cf;
+  padding-right: 64px;
+  margin-right: 24px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.TextQuestionRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 24px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.TextQuestionBottom {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 64px;
+  border-top: 1px solid #12a2cf;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / 3 / 3;
+}
+
 .MainContainer {
   display: -ms-grid;
   display: grid;
@@ -366,7 +431,6 @@ h2 {
   grid-area: 1 / 2 / 2 / 3;
   padding-left: 64px;
   padding-right: 64px;
-  padding-top: 8px;
 }
 
 .MainContainerBody {
@@ -464,7 +528,6 @@ h2 {
 .PaginationProgressContainer .PaginationProgressPassive {
   background-color: #c4c4c4;
 }
-<<<<<<< HEAD
 
 .BigIconButtonContainer {
   display: -webkit-box;
@@ -594,6 +657,4 @@ h2 {
   max-height: 32px;
   min-height: 8px;
 }
-=======
->>>>>>> 104248fd36054a24106c9ff712c77a475eca416d
 /*# sourceMappingURL=styles.css.map */
