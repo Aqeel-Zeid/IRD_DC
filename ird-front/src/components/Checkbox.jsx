@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
-export default function Checkbox({ ClassName, Text, ClassNameLabel }) {
-    return (
-        <form>
-            <p>
-                <input className={ClassName} type="radio" checked="true" />
-                    <label className={ClassNameLabel} >{Text}</label>
-            </p>
-        </form>
-
-
-
-    )
+export default function Checkbox({ Type, Text, Disabled }) {
+  return (
+    <div>
+      <label class="CheckboxContainer">
+        {Text}
+        <input type="checkbox" disabled={Disabled} />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+  );
 }
