@@ -82,6 +82,8 @@ h3{
   font-size: $spacingUnit * 2;
   font-weight: bold;
   width: 100%;
+
+
 }
 
 .ButtonSecondary {
@@ -404,4 +406,81 @@ h3{
     max-width: $spacingUnit * 30;
     align-self: center;
   }
+}
+
+
+.SectionSideBarContainer{
+
+  display: flex;
+  flex-direction: column;
+  background-color: #4D4A4A;
+}
+
+.SectionSideBarItem{
+  padding-top: $spacingUnit * 2;
+  padding-bottom: $spacingUnit;
+  padding-left: $spacingUnit * 2;
+  font-weight: $semibold;
+  padding-bottom: $spacingUnit * 3;
+}
+
+.SectionSideBarItemSelected{
+  background-color: $color-background-dark;
+}
+
+.QuestionNumber{
+  height: $spacingUnit * 4;
+  width: $spacingUnit * 4;
+  background-color: $color-background-extra-dark;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-block;
+  padding: $spacingUnit;
+
+  label{
+    color: $color-text;
+    font-size: $spacingUnit * 2;
+    font-weight: $semibold;
+    text-align: center;
+    display: block;
+  }
+}
+
+.QuestionContainer{
+  background-color: $color-background-light;
+  padding: $spacingUnit;
+}
+.QuestionHeader{
+  color: $color-text-dark;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  
+  .BodyText{
+    flex-grow: 3;
+    padding-left: $spacingUnit * 2;
+    line-height: $spacingUnit * 2.5;
+    font-weight: $semibold;
+    font-size: $spacingUnit * 2;
+  }
+
+  .QuestionNumber{
+    align-self: flex-start;
+  }
+
+}
+.QuestionControls{
+
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+
+  img{
+    padding-left: $spacingUnit * 0.5;
+    padding-right: $spacingUnit * 0.5;   
+    max-height: $spacingUnit * 4;
+    min-height: $spacingUnit ;
+  }
+
 }

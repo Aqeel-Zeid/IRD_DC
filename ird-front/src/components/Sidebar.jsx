@@ -9,11 +9,7 @@ export default function Sidebar() {
   return (
     <div className="SideBarContainer">
       <img
-<<<<<<< HEAD
-        style = {{marginTop:"16px"}}
-=======
       style={{marginTop: "16px"}}
->>>>>>> 8ac4be83340e321e620f09373632b6d2c01e59c2
         src={logo}
         alt="Logo Institute of Research and Development"
         className="SideBarIcon"
