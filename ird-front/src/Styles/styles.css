@@ -75,6 +75,27 @@ h2 {
   display: block;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  display: block;
+}
+
+.TitleDescription {
+  font-weight: 400;
+  font-size: 16px;
+  color: #c4c4c4;
+  display: block;
+  line-height: 20px;
+}
+
+.bodyText {
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+}
+
 .ButtonPrimary {
   background-color: #12a2cf;
   color: #ffffff;
@@ -232,19 +253,6 @@ h2 {
   display: block;
 }
 
-.TitleDescription {
-  font-weight: 400;
-  font-size: 16px;
-  color: #c4c4c4;
-  display: block;
-}
-
-.bodyText {
-  font-weight: 600;
-  font-size: 16px;
-  display: block;
-}
-
 .SideBarContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,7 +306,6 @@ h2 {
   grid-area: 1 / 2 / 2 / 3;
   padding-left: 64px;
   padding-right: 64px;
-  padding-top: 8px;
 }
 
 .MainContainerBody {
@@ -395,5 +402,40 @@ h2 {
 
 .PaginationProgressContainer .PaginationProgressPassive {
   background-color: #c4c4c4;
+}
+
+.BigIconButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 100%;
+  padding: 8px;
+}
+
+.BigIconButtonContainer h3, .BigIconButtonContainer label {
+  text-align: center;
+  position: relative;
+  right: 16px;
+  max-width: 240px;
+}
+
+.BigIconButtonContainer img {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 240px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=styles.css.map */
