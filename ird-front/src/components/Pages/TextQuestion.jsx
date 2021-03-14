@@ -3,6 +3,7 @@ import TextInput from "../TextInput";
 import ButtonMain from "../ButtonMain";
 import Checkbox from "../Checkbox";
 import Question from "../Question";
+import PlainTextAnswerComponent from "../PlainTextAnswerComponent";
 
 export default function TextQuestion() {
   return (
@@ -102,8 +103,8 @@ export default function TextQuestion() {
         </div>
       </div>
       <div className="TextQuestionBottom">
-      <label>Preview</label>
-        <Question></Question>
+      <label style = {{ marginBottom: 20, fontSize: 20 }} >Preview</label>
+        <Question AnswerComponent = {<PlainTextAnswerComponent/>}></Question>
         </div>
     </div>
   );

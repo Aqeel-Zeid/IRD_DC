@@ -15,6 +15,7 @@ import CreateQuestion from "./components/Pages/CreateQuestion";
 import QuestionFormat from "./components/Pages/QuestionFormat";
 import TextQuestion from "./components/Pages/TextQuestion";
 import ChoiceQuestion from "./components/Pages/ChoiceQuestion";
+import QEditor from "./components/Pages/QEditor";
 
 function App() {
   return (
@@ -63,9 +64,6 @@ function App() {
             <ChoiceQuestion></ChoiceQuestion>
           </MainLayout>
         </Route>
-        <Route path="/CQ/QuestionaireEditor">
-          <MainLayout Title="Questionaire Editor" Description=""></MainLayout>
-        </Route>
         <Route path="/CQ/CreateRespondentCode">
           <MainLayout
             Title="Create New Respondent Code"
@@ -90,6 +88,11 @@ function App() {
               Label="Sample"
               InputType="input"
             ></QGeneralInfo>
+          </MainLayout>
+        </Route>
+        <Route path="/CQ/QuestionaireEditor">
+          <MainLayout Title="Questionaire Editor" Description="">
+            <QEditor></QEditor>
           </MainLayout>
         </Route>
         <Route path="/Questionnaires">

@@ -3,11 +3,12 @@ import TextInput from "../TextInput";
 import ButtonMain from "../ButtonMain";
 import Checkbox from "../Checkbox";
 import Question from "../Question";
+import ChoiceAnswerComponent from "../ChoiceAnswerComponent";
 
 export default function TextQuestion() {
   return (
-    <div className="TextQuestionContainer">
-      <div className="TextQuestionLeft">
+    <div className="ChoiceQuestionContainer">
+      <div className="ChoiceQuestionLeft">
         <TextInput
           ClassName="TextArea"
           Label="Question"
@@ -36,7 +37,7 @@ export default function TextQuestion() {
           </label>
         </div>
       </div>
-      <div className="TextQuestionRight">
+      <div className="ChoiceQuestionRight">
         <label>Choices</label>
           <div style={{ marginTop: 40 }}>
             <TextInput
@@ -75,9 +76,9 @@ export default function TextQuestion() {
           <ButtonMain ClassName="ButtonSecondary" Text="Back"></ButtonMain>
         </div>
       </div>
-      <div className="TextQuestionBottom">
+      <div className="ChoiceQuestionBottom">
       <label style = {{ marginBottom: 20, fontSize: 20 }} >Preview</label>
-        <Question></Question>
+        <Question AnswerComponent = {<ChoiceAnswerComponent/>}></Question>
         </div>
     </div>
   );
