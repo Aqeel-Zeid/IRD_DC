@@ -48,6 +48,28 @@ h2 {
     display: block;
   }
 
+h3{
+  font-weight: $bold;
+  font-size: $spacingUnit * 4;
+  line-height: $spacingUnit * 5;
+  display: block;
+}
+
+.TitleDescription {
+  font-weight: $normal;
+  font-size: $spacingUnit * 2;
+  color: $color-accent;
+  display: block;
+  line-height: $spacingUnit * 2.5;
+}
+
+.bodyText{
+    font-weight: 600;
+    font-size: $spacingUnit * 2;
+    display: block;
+}
+
+
 .ButtonPrimary {
   background-color: $color-primary;
   color: $color-text;
@@ -234,18 +256,6 @@ h2 {
   display: block;
 }
 
-.TitleDescription {
-  font-weight: $normal;
-  font-size: $spacingUnit * 2;
-  color: $color-accent;
-  display: block;
-}
-
-.bodyText{
-    font-weight: 600;
-    font-size: $spacingUnit * 2;
-    display: block;
-}
 
 
 .SideBarContainer {
@@ -309,7 +319,6 @@ h2 {
   grid-area: 1 / 2 / 2 / 3;
   padding-left: $spacingUnit * 8;
   padding-right: $spacingUnit * 8;
-  padding-top: $spacingUnit;
  
 }
 .MainContainerBody {
@@ -391,5 +400,31 @@ h2 {
   }
   .PaginationProgressPassive{
     background-color: $color-accent;
+  }
+}
+
+
+.BigIconButtonContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: fit-content;
+  width: 100%;
+
+  padding: $spacingUnit;
+
+  h3 , label {
+    text-align: center;
+    position: relative;
+    right:  $spacingUnit * 2;
+    max-width: $spacingUnit * 30;
+  }
+
+  img{
+    margin-top: $spacingUnit * 3;
+    margin-bottom: $spacingUnit * 2;
+    width: 100%;
+    max-width: $spacingUnit * 30;
+    align-self: center;
   }
 }
