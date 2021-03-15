@@ -2,6 +2,7 @@ import React from 'react'
 import TextInput from '../TextInput';
 import ButtonMain from '../ButtonMain';
 import formatImage from './Assets/respondentDescription.svg';
+import { Link } from 'react-router-dom';
 
 export default function QRespondentFormat() {
     return (
@@ -19,8 +20,12 @@ export default function QRespondentFormat() {
                     <TextInput ClassName="TextInput" Label="Example of usage" InputType="input" PlaceHolder="Example" ></TextInput>
                 </div>
                 <div style={{ display: "flex",  justifyContent: "flex-end" }}>
-                    <ButtonMain ClassName="ButtonPrimary" Text="Save"></ButtonMain>
-                    <ButtonMain ClassName="ButtonSecondary" Text="Back"></ButtonMain>
+                    <Link to="/CQ/QuestionaireEditor">
+                        <ButtonMain ClassName="ButtonPrimary" Text="Save"></ButtonMain>
+                    </Link>
+                    <Link to = "/CQ/SelectRespondentCode">
+                        <ButtonMain ClassName="ButtonSecondary" Text="Back"></ButtonMain>
+                    </Link>
                 </div>
                 <div style={{ marginTop: 80 }}>
                     

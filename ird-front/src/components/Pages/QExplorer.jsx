@@ -7,7 +7,7 @@ export default function QExplorer() {
     return (
         <div>
             <NewQuestionaireButton/>
-            <h1>Drafts</h1>
+                <h1>Drafts</h1>
             <QCardArray/>
         </div>
     )

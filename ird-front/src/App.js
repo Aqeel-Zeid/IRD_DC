@@ -48,19 +48,13 @@ function App() {
         <Route path="/CQ/QuestionaireEditor">
           <MainLayout Title="Questionaire Editor" Description=""></MainLayout>
         </Route>
-        <Route path="/CQ/CreateRespondentCode">
+        <Route path="/CQ/SelectRespondentCode">
           <MainLayout
             Title="Create New Respondent Code"
             Description="Define the format of a respondent code and how to use it"
           >
             <QRespondentFormat></QRespondentFormat>
           </MainLayout>
-        </Route>
-        <Route path="/CQ/SelectRespondentCode">
-          <MainLayout
-            Title="Select Respondent Code"
-            Description="Respondent code uniquely identifies each response of a questionaire"
-          ></MainLayout>
         </Route>
         <Route path="/CQ/GeneralInformation">
           <MainLayout

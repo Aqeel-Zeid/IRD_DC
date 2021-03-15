@@ -55,6 +55,14 @@ h3{
   display: block;
 }
 
+a{
+  text-decoration: none;
+  color: $color-text;
+  &:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+  }
+}
+
 .TitleDescription {
   font-weight: $normal;
   font-size: $spacingUnit * 2;

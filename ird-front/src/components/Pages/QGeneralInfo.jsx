@@ -1,6 +1,7 @@
 import React from "react";
 import TextInput from "../TextInput";
 import ButtonMain from "../ButtonMain";
+import { Link } from "react-router-dom";
 
 export default function QGeneralInfo() {
   return (
@@ -23,7 +24,9 @@ export default function QGeneralInfo() {
       <br />
       <br />
       <div style={{ marginTop: 80 }}>
-        <ButtonMain ClassName="ButtonPrimary" Text="Next"></ButtonMain>
+        <Link to="/CQ/SelectRespondentCode">
+          <ButtonMain ClassName="ButtonPrimary" Text="Next"></ButtonMain>
+        </Link>
         <div style={{ alignSelf: "center" }}></div>
       </div>
     </div>
