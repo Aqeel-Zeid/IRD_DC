@@ -147,46 +147,63 @@ a:focus, a:hover, a:visited, a:link, a:active {
   width: 100%;
 }
 
-.CheckboxChecked {
-  background-color: #12a2cf;
-  padding: 8px;
-  margin-right: 16px;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: normal;
+.CheckboxContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.CheckboxUnchecked {
-  background-color: #12a2cf;
-  padding: 8px;
-  margin-right: 16px;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: normal;
+.CheckboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
-.CheckboxDisabled {
-  background-color: #12a2cf;
-  padding: 8px;
-  margin-right: 16px;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: normal;
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
 }
 
-.CheckedLabel {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
+.CheckboxContainer:hover input ~ .checkmark {
+  background-color: #ccc;
 }
 
-.UncheckedLabel {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
+.CheckboxContainer input:checked ~ .checkmark {
+  background-color: #2196F3;
 }
 
-.CheckboxDisabledLabel {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.CheckboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.CheckboxContainer .checkmark:after {
+  left: 7.5px;
+  top: 4.5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .HorizontalDivider {
@@ -203,7 +220,7 @@ a:focus, a:hover, a:visited, a:link, a:active {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 0;
-  border-top: 100vh solid #12a2cf;
+  border-top: 30vh solid #12a2cf;
   width: 3px;
   margin-left: 16px;
   margin-right: 16px;
@@ -332,6 +349,149 @@ a:focus, a:hover, a:visited, a:link, a:active {
   grid-area: 1 / 2 / 2 / 3;
 }
 
+.TextQuestionContainer {
+  margin-top: 48px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.TextQuestionLeft {
+  border-right: 1px solid #12a2cf;
+  padding-right: 64px;
+  margin-right: 24px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.TextQuestionRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 24px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.TextQuestionBottom {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 64px;
+  border-top: 1px solid #12a2cf;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.ChoiceQuestionContainer {
+  margin-top: 48px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.ChoiceQuestionLeft {
+  border-right: 1px solid #12a2cf;
+  padding-right: 64px;
+  margin-right: 24px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.ChoiceQuestionRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 24px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.ChoiceQuestionBottom {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 64px;
+  border-top: 1px solid #12a2cf;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.QEditorContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 7fr;
+      grid-template-columns: 3fr 7fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.QEditorSidebar {
+  height: 100vh;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.QEditorQuestions {
+  margin-left: 16px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
 .MainContainer {
   display: -ms-grid;
   display: grid;
@@ -357,12 +517,10 @@ a:focus, a:hover, a:visited, a:link, a:active {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 1 / 2 / 2 / 3;
-  padding-left: 64px;
   padding-right: 64px;
 }
 
 .MainContainerBody {
-  padding-left: 64px;
   padding-right: 64px;
   margin-top: 32px;
   -ms-grid-row: 2;
@@ -493,6 +651,9 @@ a:focus, a:hover, a:visited, a:link, a:active {
 }
 
 .SectionSideBarContainer {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,6 +662,10 @@ a:focus, a:hover, a:visited, a:link, a:active {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #4D4A4A;
+}
+
+.SectionSideBarContainer .ButtonPrimary {
+  margin-top: 32px;
 }
 
 .SectionSideBarItem {
