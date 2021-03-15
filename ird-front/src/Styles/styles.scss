@@ -387,11 +387,12 @@ grid-row-gap: 0px;
 .MainContainerHeader {
   grid-area: 1 / 2 / 2 / 3;
   padding-right: $spacingUnit * 8;
- 
+  padding-top: $spacingUnit * 2;
 }
 .MainContainerBody {
   padding-right: $spacingUnit * 8;
-  margin-top: $spacingUnit * 4;
+  padding-left: $spacingUnit * 0.5;
+  margin-right: $spacingUnit * 4;
   grid-area: 2 / 2 / 3 / 3;
 }
 
