@@ -16,97 +16,100 @@ import QuestionFormat from "./components/Pages/QuestionFormat";
 import TextQuestion from "./components/Pages/TextQuestion";
 import ChoiceQuestion from "./components/Pages/ChoiceQuestion";
 import QEditor from "./components/Pages/QEditor";
+import Store from "./State/store";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/CQ/AQ/AddQuestion">
-          <MainLayout
-            bgColor="black"
-            Title="Add A Question"
-            Description="Select the type of question"
-          >
-            <AddQuestion></AddQuestion>
-          </MainLayout>
-        </Route>
-        <Route path="/CQ/AQ/CreateQuestion">
-          <MainLayout
-            bgColor="black"
-            Title="Create New Question"
-            Description="Select the type of question"
-          >
-            <CreateQuestion></CreateQuestion>
-          </MainLayout>
-        </Route>
-        <Route path="/CQ/AQ/QuestionFormat">
-          <MainLayout
-            bgColor="black"
-            Title="Pick A Question Format"
-            Description="Select the type of question"
-          >
-            <QuestionFormat></QuestionFormat>
-          </MainLayout>
-        </Route>
-        <Route path="/CQ/QT/CreateTextQuestion">
-          <MainLayout
-            Title="Create New Text Question"
-            Description="Enter Question Details"
-          >
-            <TextQuestion></TextQuestion>
-          </MainLayout>
-        </Route>
-        <Route path="/CQ/QT/CreateChoiceQuestion">
-          <MainLayout
-            Title="Create New Choice Question"
-            Description="Enter Question Details"
-          >
-            <ChoiceQuestion></ChoiceQuestion>
-          </MainLayout>
-        </Route>
-        <Route path="/CQ/SelectRespondentCode">
-          <MainLayout
-            Title="Create New Respondent Code"
-            Description="Define the format of a respondent code and how to use it"
-          >
-            <QRespondentFormat></QRespondentFormat>
-          </MainLayout>
-        </Route>
-        <Route path="/CQ/GeneralInformation">
-          <MainLayout
-            Title="Create Questionaire"
-            Description="General Infromation"
-          >
-            <QGeneralInfo
-              ClassName="TextInput"
-              Label="Sample"
-              InputType="input"
-            ></QGeneralInfo>
-          </MainLayout>
-        </Route>
-        <Route path="/CQ/QuestionaireEditor">
-          <MainLayout Title="Questionaire Editor" Description="">
-            <QEditor></QEditor>
-          </MainLayout>
-        </Route>
-        <Route path="/Questionnaires">
-          <MainLayout
-            Title="Questionnaires Explorer"
-            Description="View All Questionnaire templates"
-          >
-            <QExplorer />
-          </MainLayout>
-        </Route>
-        <Route path="/">
-          <MainLayout
-            Title="Questionaires Explorer"
-            Description="View All Questionnaire templates"
-          >
-            <QExplorer />
-          </MainLayout>
-        </Route>
-      </Switch>
-    </Router>
+    <Store>
+      <Router>
+        <Switch>
+          <Route path="/CQ/AQ/AddQuestion">
+            <MainLayout
+              bgColor="black"
+              Title="Add A Question"
+              Description="Select the type of question"
+            >
+              <AddQuestion></AddQuestion>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/AQ/CreateQuestion">
+            <MainLayout
+              bgColor="black"
+              Title="Create New Question"
+              Description="Select the type of question"
+            >
+              <CreateQuestion></CreateQuestion>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/AQ/QuestionFormat">
+            <MainLayout
+              bgColor="black"
+              Title="Pick A Question Format"
+              Description="Select the type of question"
+            >
+              <QuestionFormat></QuestionFormat>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/QT/CreateTextQuestion">
+            <MainLayout
+              Title="Create New Text Question"
+              Description="Enter Question Details"
+            >
+              <TextQuestion></TextQuestion>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/QT/CreateChoiceQuestion">
+            <MainLayout
+              Title="Create New Choice Question"
+              Description="Enter Question Details"
+            >
+              <ChoiceQuestion></ChoiceQuestion>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/SelectRespondentCode">
+            <MainLayout
+              Title="Create New Respondent Code"
+              Description="Define the format of a respondent code and how to use it"
+            >
+              <QRespondentFormat></QRespondentFormat>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/GeneralInformation">
+            <MainLayout
+              Title="Create Questionaire"
+              Description="General Infromation"
+            >
+              <QGeneralInfo
+                ClassName="TextInput"
+                Label="Sample"
+                InputType="input"
+              ></QGeneralInfo>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/QuestionaireEditor">
+            <MainLayout Title="Questionaire Editor" Description="">
+              <QEditor></QEditor>
+            </MainLayout>
+          </Route>
+          <Route path="/Questionnaires">
+            <MainLayout
+              Title="Questionnaires Explorer"
+              Description="View All Questionnaire templates"
+            >
+              <QExplorer />
+            </MainLayout>
+          </Route>
+          <Route path="/">
+            <MainLayout
+              Title="Questionaires Explorer"
+              Description="View All Questionnaire templates"
+            >
+              <QExplorer />
+            </MainLayout>
+          </Route>
+        </Switch>
+      </Router>
+    </Store>
   );
 }
 

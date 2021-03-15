@@ -3,7 +3,9 @@ import TextInput from "../TextInput";
 import ButtonMain from "../ButtonMain";
 import { Link } from "react-router-dom";
 
-export default function QGeneralInfo() {
+
+export default function QGeneralInfo(props) {
+
   return (
     <div style={{ marginTop: 40 }}>
       <TextInput

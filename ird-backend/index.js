@@ -81,11 +81,6 @@ db.run( db_script.sqliteString ,
 
 //-----------------------------------------------
 
-app.use(function(req, res, next){
-    // Edit request object here
-    req.db = db;
-    next();
-  });
 
 //-----------------------------------------------
 

@@ -9,7 +9,7 @@ export default function QEditor(props) {
   return (
     <div className="QEditorContainer">
       <div className="QEditorSidebar">
-        <SideBar></SideBar>
+        <SideBar/>
       </div>
       <div className="QEditorQuestions">
         <div style={{ marginBottom: 24 }}>
