@@ -1,0 +1,21 @@
+{
+  "questionaireName": "Questionnaire abc",
+  "questionaireDescription": "abc description",
+  "respondent_code_format": {
+    "format": "AAA-999",
+    "description": "Use it like this",
+    "example_usage": "CMB-032"
+  },
+  "qid": "",
+  "created_at": "",
+  "selected_section" : "0",
+  "sections": [
+    {
+      "section_name": "General Section",
+      "is_skip_logic": "false",
+      "description": "General Information Section",
+      "order": "1",
+      "questions": []
+    }
+  ]
+}

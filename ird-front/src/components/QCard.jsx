@@ -7,7 +7,6 @@ export default function QCard(props) {
             <label className = "bodyText" style = {{flexGrow : "4"}}> {props.QuestionaireName}</label>
             <label className = "bodyText" > {props.Date}  </label>
             <img src = {ViewIcon} alt = "View Questionnaire"  />
-
         </div>
     )
 }

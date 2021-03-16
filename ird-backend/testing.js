@@ -19,4 +19,4 @@ for (const name of Object.keys(nets)) {
     }
 }
 
-console.log(results)
+console.log(results) 

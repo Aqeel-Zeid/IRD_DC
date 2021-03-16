@@ -8,12 +8,12 @@ import SaveIcon from "../Assets/wish_list.svg"
 
 export default function Question(props) {
   return (
-    <div className="QuestionContainer">
+    <div className="QuestionContainer" style = {{marginBottom:32}}>
       <div className="QuestionHeader">
-        <QuestionNumber Number="0" />
+        <QuestionNumber Number={props.QuestionNumber} />
         <div className = "QuestionAndAnswerPanel">
           <label className="BodyText">
-              Is Your Mother Available at home ?
+              {props.Label}
           </label>
           <div className = "AnswerComponentContainer">
             {
@@ -29,11 +29,7 @@ export default function Question(props) {
           <img src={MoveIcon} alt="Re position" />
         </div>
       </div>
-      <div className="QuestionBody">
-        {
-          props.children
-        }
-      </div>
+  
     </div>
   );
 }

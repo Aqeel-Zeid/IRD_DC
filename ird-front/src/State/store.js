@@ -4,11 +4,16 @@ import Reducer from './reducer.js'
 
 const initialState = {
     "questionaireName": "",
-    "description": "",
-    "respondent_code_format" : "",
+    "questionaireDescription": "",
+    "respondent_code_format" : {
+        format : "",
+        description : "",
+        example_usage : ""
+    },
     "qid": "",
     "created_date": "",
     "public_key" : "",
+    "selected_section" : "",
     "sections": [
       {
         "section_name": "",

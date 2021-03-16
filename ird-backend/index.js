@@ -1,7 +1,6 @@
 var fs = require("fs");
 var path = require("path");
 
-
 //Create Data Folder in the user system
 
 console.log("Initialize Folders in the System");
@@ -22,6 +21,10 @@ function createDirectories(pathname) {
 
 createDirectories(dir);
 
+//Create a questionaire directory
+
+createDirectories(`${dir}/Questionaires`);
+
 //------------------------------------------------
 
 //Import Server Dependencies and Initialize the Server
@@ -34,55 +37,119 @@ let app = express();
 app.use(cors());
 
 // support parsing of application/json type post data
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({
-    extended: true
-  }));
+var bodyParser = require("body-parser");
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
-  app.use(bodyParser.json());
+app.use(bodyParser.json());
 //-----------------------------------------------
 
 //Initialize Database----------------------------
 
-const sqlite3 = require("sqlite3").verbose();
+// const sqlite3 = require("sqlite3").verbose();
 
-let db = new sqlite3.Database(`${__dirname}/${dir}/ird_dc.db` ,(err) => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log("Connected to the SQlite database.");
+// let db = new sqlite3.Database(`${__dirname}/${dir}/ird_dc.db` ,(err) => {
+//   if (err) {
+//     return console.error(err.message);
+//   }
+//   console.log("Connected to the SQlite database.");
+// });
+
+// //Add The db object to the request object
+
+// app.use(function(req, res, next){
+//     // Edit request object here
+//     req.db = db;
+//     next();
+//   });
+
+//-----------------------------------------------
+
+//Run The Database Script
+
+// const db_script = require("./db_script")
+
+// db.run( db_script.sqliteString ,
+// (err) => {
+//     if (err) {
+//         // Table already created
+//         console.log(err)
+//     }else{
+//         // Table just created, creating some rows
+//         console.log(err)
+
+//     }
+// });
+
+//-----------------------------------------------
+
+//-----------------------------------------------
+
+//Define Routes-----------------------------------
+
+// "questionaireName": "",
+//     "questionaireDescription": "",
+//     "respondent_code_format" : {
+//         format : "",
+//         description : "",
+//         exampleUsage : ""
+//     },
+//     "qid": "",
+//     "created_date": "",
+
+//Create new questionaire
+
+app.post("/CreateNewQuestionaire", function (req, res) {
+  let {
+    questionaireName,
+    questionaireDescription,
+    respondent_code_format,
+    qid,
+    created_at,
+    sections
+  } = req.body;
+
+  console.log(questionaireName, questionaireDescription, respondent_code_format , qid, created_at, sections )
+
+  fs.writeFileSync(`${dir}/Questionaires/${questionaireName}.json`, JSON.stringify(req.body), 'utf8' );
+
+
+  res.send("Successfully Created").status(200);
+
 });
 
-//Add The db object to the request object
+//Update Questionaire-----------------------------
 
-app.use(function(req, res, next){
-    // Edit request object here
-    req.db = db;
-    next();
+//Get All the questionaires-------------------
+
+app.get("/GetAllQuestionaires", (req,res) => {
+
+    let Qarray = []
+
+    fs.readdir(`${dir}/Questionaires`, function (err, files) {
+      //handling error
+      if (err) {
+          return console.log('Unable to scan directory: ' + err);
+      } 
+      //listing all files using forEach
+      files.forEach(function (file) {
+          // Do whatever you want to do with the file
+          let rawdata = fs.readFileSync(`${dir}/Questionaires/${file}`, 'utf8' , (err,data) => {
+           
+          });
+          Qarray.push(JSON.parse(rawdata))
+          //console.log(JSON.parse(rawdata)); 
+      });
+
+      console.log(Qarray)
+      res.json(Qarray).status(200);
   });
 
-//-----------------------------------------------
+})
 
-//Run The Database Script 
-
-const db_script = require("./db_script")
-
-db.run( db_script.sqliteString ,
-(err) => {
-    if (err) {
-        // Table already created
-        console.log(err)
-    }else{
-        // Table just created, creating some rows
-        console.log(err)
-      
-    }
-});  
-
-//-----------------------------------------------
-
-
-//-----------------------------------------------
 
 //Start Server-----------------------------------
 const port = 4000;

@@ -15,6 +15,7 @@ export default function QuestionFormat() {
         IconDescription="Text Icon"
         Label="Text"
         Description="Response"
+        LinkTo = "/CQ/QT/CreateTextQuestion"
       />
       <QuestionDivider
         ClassName="VerticalDivider"
@@ -32,6 +33,7 @@ export default function QuestionFormat() {
           IconDescription="Test Quiz Icon"
           Label="Multiple Choice"
           Description="Response"
+          LinkTo = "/CQ/QT/CreateChoiceQuestion"
         />
       </div>
       <QuestionDivider
@@ -53,6 +55,7 @@ export default function QuestionFormat() {
         IconDescription="Number Icon"
         Label="Number"
         Description="Response"
+        LinkTo = "/CQ/QT/CreateNumberQuestion"
       />
     </div>
   );

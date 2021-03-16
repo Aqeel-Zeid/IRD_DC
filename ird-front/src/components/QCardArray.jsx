@@ -1,12 +1,66 @@
-import React from 'react'
+import React, {useEffect, useState, useContext} from 'react'
+import { Link } from 'react-router-dom';
 import QCard from './QCard'
 
+
+import { Context } from "../State/store";
+
 export default function QCardArray() {
+
+    const [state, dispatch] = useContext(Context);
+    
+    const [qCards, setQCards] = useState([])
+
+
+    useEffect(() => {
+        fetch('http://localhost:4000/GetAllQuestionaires')
+        // Handle success
+        .then(response => response.json())  // convert to json
+        .then(json => {
+            
+            let QCards = [];
+
+            json.map((questionaire) =>{
+                console.log(questionaire)
+                
+                QCards.push(
+                    <Link 
+                        to="/CQ/QuestionaireEditor" 
+                        key = {questionaire.qid}    
+                        onClick = {
+                            () => {
+                                dispatch({
+                                    type: "SET_QUESTIONAIRE",
+                                    payload: questionaire,
+                                  });
+                            }
+                        }
+                    >
+                             <QCard 
+                                QuestionaireName = {questionaire.questionaireName} 
+                                Date = { new Date(questionaire.created_at).toLocaleDateString() } 
+                                
+                            />
+                    </Link>
+                   )
+                
+            })
+
+            setQCards(QCards);
+
+        })    //print data to console
+        .catch(err => console.log('Request Failed', err)); // Catch errors
+    }, [])
+
+    useEffect(() => {
+       console.log(qCards)
+    }, [qCards])
+    
     return (
         <div className = "QCardArrayContainer">
-            <QCard QuestionaireName = "Test Questiannaire 1" Date = { new Date().toLocaleDateString()}/>
-            <QCard QuestionaireName = "Test Questiannaire 2" Date = { new Date().toLocaleDateString()}/>
-            <QCard QuestionaireName = "Test Questiannaire 3" Date = { new Date().toLocaleDateString()}/>
+            {
+              qCards
+            }
         </div>
     )
 }

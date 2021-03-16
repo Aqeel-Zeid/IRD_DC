@@ -1,83 +1,63 @@
-import React from 'react'
-import ButtonMain from './ButtonMain'
+import React, { useState, useEffect, useContext } from "react";
+import ButtonMain from "./ButtonMain";
 
-export default function SectionSideBar() {
+import { Context } from "../State/store";
 
-    return (
-        <div className = "SectionSideBarContainer">
-            <div className = "SectionSideBarItem">
-                Section 1
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 2
-            </div>
-            <div className = "SectionSideBarItem SectionSideBarItemSelected">
-                Section 3
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 4
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 1
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 2
-            </div>
-            <div className = "SectionSideBarItem SectionSideBarItemSelected">
-                Section 3
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 4
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 1
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 2
-            </div>
-            <div className = "SectionSideBarItem SectionSideBarItemSelected">
-                Section 3
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 4
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 1
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 2
-            </div>
-            <div className = "SectionSideBarItem SectionSideBarItemSelected">
-                Section 3
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 4
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 1
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 2
-            </div>
-            <div className = "SectionSideBarItem SectionSideBarItemSelected">
-                Section 3
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 4
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 1
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 2
-            </div>
-            <div className = "SectionSideBarItem SectionSideBarItemSelected">
-                Section 3
-            </div>
-            <div className = "SectionSideBarItem">
-                Section 4
-            </div>
-            <ButtonMain Text = "Add Section" ClassName="ButtonPrimary"/>
+export default function SectionSideBar({
+  SectionList,
+  SelectedSection,
+  SetSelectedSection,
+}) {
+    const [state, dispatch] = useContext(Context);
+
+  //SectionList = {state.sections} SelectedSection = {selectedSection}
+  let classNameDefinition = "SectionSideBarItem";
+
+  const [sectionList, setSectionList] = useState([]);
+
+  useEffect(() => {
+
+    //console.log(state.selected_section);
+
+    let sList = [];
+    SectionList.forEach((section, index) => {
+      SelectedSection === index
+        ? (classNameDefinition =
+            "SectionSideBarItem SectionSideBarItemSelected")
+        : (classNameDefinition = "SectionSideBarItem");
+     
+      sList.push(
+        <div
+          className={
+            index === state.selected_section
+              ? "SectionSideBarItem SectionSideBarItemSelected"
+              : "SectionSideBarItem"
+          }
+          key={index}
+          onClick={() =>
+            {  
+                //dispatch({ type: "SET_selected_section", payload:  index  })
+                SetSelectedSection(index)
+                //console.log(state.selected_section, index )
+            }
+                
+          }
+        >
+          {section.section_name}
         </div>
-    )
+      );
+    });
+
+    setSectionList(sList);
+  }, [state.selected_section]);
+
+  useEffect(() => {}, [sectionList]);
+
+  return (
+    <div className="SectionSideBarContainer">
+      {sectionList}
+
+      <ButtonMain Text="Add Section" ClassName="ButtonPrimary" />
+    </div>
+  );
 }
