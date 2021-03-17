@@ -57,7 +57,7 @@ export default function SectionSideBar({
   return (
     <div className="SectionSideBarContainer">
       {sectionList}
-      <Link to = "">
+      <Link to = "/CQ/AS/AddSection">
           <ButtonMain Text="Add Section" ClassName="ButtonPrimary" />
       </Link>
     </div>

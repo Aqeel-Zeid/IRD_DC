@@ -12,6 +12,7 @@ export default function CreateSection() {
         IconDescription="Normal Section Icon"
         Label="Normal Section"
         Description="Single question single Answer"
+        LinkTo = "/CQ/AS/CreateNormalSection"
       />
       <QuestionDivider
         ClassName="VerticalDivider"

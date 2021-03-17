@@ -87,7 +87,7 @@ function App() {
               <ChoiceQuestion></ChoiceQuestion>
             </MainLayout>
           </Route>
-          <Route path="/CQ/ST/CreateNormalSection">
+          <Route path="/CQ/AS/CreateNormalSection">
             <MainLayout
               Title="Create Normal Section"
             >

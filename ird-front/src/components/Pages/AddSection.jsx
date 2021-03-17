@@ -12,7 +12,7 @@ export default function AddSection() {
         Icon={libraryIcon}
         IconDescription="Add To Library Icon"
         Label="Select From Library"
-        Description="Select from an already existing questions library"
+        Description="Select previosly created section"
       />
       <QuestionDivider
         ClassName="VerticalDivider"
@@ -20,10 +20,10 @@ export default function AddSection() {
       />
       <BigIconButton
         Icon={addFile}
-        IconDescription="Create New Question Icon"
-        Label="Create new question"
-        Description="Create new question"
-        LinkTo="/CQ/AQ/QuestionFormat"
+        IconDescription="Create New Section Icon"
+        Label="New Section"
+        Description="Create new section"
+        LinkTo="/CQ/AS/CreateSection"
       />
     </div>
   );

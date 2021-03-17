@@ -17,7 +17,7 @@ export default function QEditor(props) {
 
   const [questionList, setQuestionList] = useState([]);
 
-  //console.log(state.selected_section)
+  console.log(state)
 
   useEffect(() => {
     

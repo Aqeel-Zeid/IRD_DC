@@ -24,24 +24,20 @@ export default function QCardArray() {
                 console.log(questionaire)
                 
                 QCards.push(
-                    <Link 
-                        to="/CQ/QuestionaireEditor" 
-                        key = {questionaire.qid}    
-                        onClick = {
-                            () => {
-                                dispatch({
-                                    type: "SET_QUESTIONAIRE",
-                                    payload: questionaire,
-                                  });
-                            }
-                        }
-                    >
+          
                              <QCard 
                                 QuestionaireName = {questionaire.questionaireName} 
                                 Date = { new Date(questionaire.created_at).toLocaleDateString() } 
-                                
+                                key = {questionaire.qid}    
+                                OnClick = {
+                                    () => {
+                                        dispatch({
+                                            type: "SET_QUESTIONAIRE",
+                                            payload: questionaire,
+                                          });
+                                    }
+                                }
                             />
-                    </Link>
                    )
                 
             })
