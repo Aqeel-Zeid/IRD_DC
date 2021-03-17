@@ -11,12 +11,15 @@ import QExplorer from "./components/Pages/QExplorer";
 import QGeneralInfo from "./components/Pages/QGeneralInfo";
 import QRespondentFormat from "./components/Pages/QRespondentFormat";
 import AddQuestion from "./components/Pages/AddQuestion";
+import AddSection from "./components/Pages/AddSection";
 import CreateQuestion from "./components/Pages/CreateQuestion";
+import CreateSection from "./components/Pages/CreateSection";
 import QuestionFormat from "./components/Pages/QuestionFormat";
 import TextQuestion from "./components/Pages/TextQuestion";
 import ChoiceQuestion from "./components/Pages/ChoiceQuestion";
 import QEditor from "./components/Pages/QEditor";
 import Store from "./State/store";
+import CreateNormalSection from "./components/Pages/CreateNormalSection";
 
 function App() {
   return (
@@ -32,13 +35,31 @@ function App() {
               <AddQuestion></AddQuestion>
             </MainLayout>
           </Route>
+          <Route path="/CQ/AS/AddSection">
+            <MainLayout
+              bgColor="black"
+              Title="Add A Section"
+              Description="Select the type of question"
+            >
+              <AddSection></AddSection>
+            </MainLayout>
+          </Route>
           <Route path="/CQ/AQ/CreateQuestion">
             <MainLayout
               bgColor="black"
               Title="Create New Question"
-              Description="Select the type of question"
+              Description="Select the type of section"
             >
               <CreateQuestion></CreateQuestion>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/AS/CreateSection">
+            <MainLayout
+              bgColor="black"
+              Title="Create New Section"
+              Description="Select the type of section"
+            >
+              <CreateSection></CreateSection>
             </MainLayout>
           </Route>
           <Route path="/CQ/AQ/QuestionFormat">
@@ -64,6 +85,13 @@ function App() {
               Description="Enter Question Details"
             >
               <ChoiceQuestion></ChoiceQuestion>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/ST/CreateNormalSection">
+            <MainLayout
+              Title="Create Normal Section"
+            >
+              <CreateNormalSection></CreateNormalSection>
             </MainLayout>
           </Route>
           <Route path="/CQ/SelectRespondentCode">
