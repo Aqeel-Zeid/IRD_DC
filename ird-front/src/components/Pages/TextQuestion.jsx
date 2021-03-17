@@ -6,10 +6,13 @@ import Question from "../Question";
 import PlainTextAnswerComponent from "../PlainTextAnswerComponent";
 
 import {Context} from "../../State/store"
+import { Redirect } from "react-router-dom";
 
 export default function TextQuestion() {
 
   const [state, dispatch] = useContext(Context);
+
+  const [isCompleted , setIsCompleted] = useState(false)
 
   const [formState, setFormState] = useState({
           label: "",
@@ -132,12 +135,15 @@ export default function TextQuestion() {
         <div
           style={{ marginTop: 120, display: "flex", justifyContent: "space-evenly" }}
         >
-          <ButtonMain ClassName="ButtonPrimary" Text="Add" onClick = {
-            () => {
+          <ButtonMain ClassName="ButtonPrimary" Text="Add" OnClickMethod = {
+            (e) => {
+                console.log(formState)
                 dispatch({
                   type : "ADD_question",
                   payload : formState
                 })
+                //console.log(state.sections[state.selected_section].questions)
+                setIsCompleted(true)
             }
           }/>
           <ButtonMain ClassName="ButtonSecondary" Text="Back"/>
@@ -151,6 +157,9 @@ export default function TextQuestion() {
               QuestionNumber = "1"
           />
         </div>
+        {
+          isCompleted ? <Redirect push to = "/CQ/QuestionaireEditor" /> : <></>
+        }
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import ButtonMain from "./ButtonMain";
 
 import { Context } from "../State/store";
+import { Link } from "react-router-dom";
 
 export default function SectionSideBar({
   SectionList,
@@ -56,8 +57,9 @@ export default function SectionSideBar({
   return (
     <div className="SectionSideBarContainer">
       {sectionList}
-
-      <ButtonMain Text="Add Section" ClassName="ButtonPrimary" />
+      <Link to = "">
+          <ButtonMain Text="Add Section" ClassName="ButtonPrimary" />
+      </Link>
     </div>
   );
 }
