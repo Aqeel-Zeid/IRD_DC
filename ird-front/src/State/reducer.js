@@ -1,7 +1,7 @@
 const Reducer = (state, action) => {
   
   //console.log(state,action)
-  console.log(state.sections)
+  console.log(action)
 
   switch (action.type) {
     case "SET_questionaireName":

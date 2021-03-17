@@ -9,7 +9,6 @@ import { v4 as uuidv4 } from "uuid";
 import { Context } from "../../State/store";
 
 export default function QRespondentFormat() {
-  
   const [state, dispatch] = useContext(Context);
 
   return (
@@ -70,16 +69,18 @@ export default function QRespondentFormat() {
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Link
             to="/CQ/QuestionaireEditor"
-            onClick={() => {
+            onClick={async () => {
               //Set qid
-              dispatch({ type: "SET_qid", payload: uuidv4() });
+              await dispatch({ type: "SET_qid", payload: uuidv4() });
 
               //set created_time
-              dispatch({
+              await dispatch({
                 type: "SET_created_date",
                 payload: new Date().toISOString(),
               });
 
+              console.log(state)
+  
               //create the questionaire in the server
               fetch("http://localhost:4000/CreateNewQuestionaire", {
                 method: "POST",
@@ -89,16 +90,16 @@ export default function QRespondentFormat() {
                   respondent_code_format: state.respondent_code_format,
                   qid: state.qid,
                   created_at: state.created_date,
-                  selected_section : "0",
+                  selected_section: "0",
                   sections: [
-                      {
-                        "section_name": "General Section",
-                        "is_skip_logic": "false",
-                        "description": "General Information Section",
-                        "order": "1",
-                        "questions" : [],
-                      }
-                  ]
+                    {
+                      section_name: "General Section",
+                      is_skip_logic: "false",
+                      description: "General Information Section",
+                      order: "1",
+                      questions: [],
+                    },
+                  ],
                 }),
                 headers: { "Content-type": "application/json; charset=UTF-8" },
               })

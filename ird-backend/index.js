@@ -144,7 +144,7 @@ app.get("/GetAllQuestionaires", (req,res) => {
           //console.log(JSON.parse(rawdata)); 
       });
 
-      console.log(Qarray)
+      //console.log(Qarray)
       res.json(Qarray).status(200);
   });
 
