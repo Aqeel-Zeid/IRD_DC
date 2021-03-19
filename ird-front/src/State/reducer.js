@@ -1,7 +1,6 @@
 const Reducer = (state, action) => {
-  
   //console.log(state,action)
-  console.log(action)
+  console.log(action);
 
   switch (action.type) {
     case "SET_questionaireName":
@@ -49,7 +48,7 @@ const Reducer = (state, action) => {
         },
       };
     case "ADD_question":
-    //   let sectionIndex = action.payload.selectedSection;
+      //   let sectionIndex = action.payload.selectedSection;
       // let sections = [...state.sections];
       // let questions_2 = [...sections[state.selected_section].questions , action.payload];
       // questions_2.push(action.payload);
@@ -58,20 +57,40 @@ const Reducer = (state, action) => {
       let sections = [...state.sections];
 
       let selectedSection = state.sections[state.selected_section];
-      selectedSection = {...selectedSection , questions : [...state.sections[state.selected_section].questions, action.payload ]}
+      selectedSection = {
+        ...selectedSection,
+        questions: [
+          ...state.sections[state.selected_section].questions,
+          action.payload,
+        ],
+      };
 
-      sections[state.selected_section] = selectedSection
+      sections[state.selected_section] = selectedSection;
 
       return {
         ...state,
-        sections: sections
+        sections: sections,
+      };
+
+    case "ADD_SECTION":
+      const newSection = {
+        ...action.payload,
+        is_skip_logic: false,
+        questions: [],
+      };
+
+      let sections_2 = [...state.sections, newSection];
+
+      return {
+        ...state,
+        sections: sections_2,
       };
 
     case "SET_selected_section":
-        return{
-            ...state,
-            selected_section : action.payload
-        };
+      return {
+        ...state,
+        selected_section: action.payload,
+      };
 
     case "SET_QUESTIONAIRE":
       return action.payload;

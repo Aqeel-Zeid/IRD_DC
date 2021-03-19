@@ -1,23 +1,24 @@
 import React, { useState, useContext } from "react";
+
 import TextInput from "../TextInput";
 import ButtonMain from "../ButtonMain";
 import Checkbox from "../Checkbox";
 import Question from "../Question";
-import PlainTextAnswerComponent from "../PlainTextAnswerComponent";
+import PlainNumberAnswerComponent from "../PlainNumberAnswerComponent";
 
 import { Context } from "../../State/store";
 import { Redirect } from "react-router-dom";
 
 import backEndSync from "../../State/backendSync";
 
-export default function TextQuestion() {
+export default function NumberQuestion() {
   const [state, dispatch] = useContext(Context);
 
   const [isCompleted, setIsCompleted] = useState(false);
 
   const [formState, setFormState] = useState({
     label: "",
-    type: "TEXT",
+    type: "NUMBER",
     order: "1",
     is_multi_part: "false",
     column_variable_name: "",
@@ -122,18 +123,7 @@ export default function TextQuestion() {
             ></TextInput>
           </div>
         </div>
-        <div style={{ marginTop: 60 }}>
-          <Checkbox Text="No Special Characters"></Checkbox>
-        </div>
-        <div
-          style={{
-            fontSize: "16px",
-            fontWeight: "normal",
-            color: "#aaaaaa",
-          }}
-        >
-          <label>@, #, $, % are not allowed</label>
-        </div>
+
         <div style={{ marginTop: 40 }}>
           <Checkbox Text="Not Mandatory"></Checkbox>
         </div>
@@ -174,7 +164,7 @@ export default function TextQuestion() {
         <label style={{ marginBottom: 20, fontSize: 20 }}>Preview</label>
         <Question
           AnswerComponent={
-            <PlainTextAnswerComponent Placeholder={formState.answer_hint} />
+            <PlainNumberAnswerComponent Placeholder={formState.answer_hint} />
           }
           Label={formState.label}
           QuestionNumber="1"

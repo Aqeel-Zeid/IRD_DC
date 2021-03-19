@@ -182,7 +182,7 @@ a:focus, a:hover, a:visited, a:link, a:active {
 }
 
 .CheckboxContainer input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 .checkmark:after {
@@ -646,7 +646,8 @@ a:focus, a:hover, a:visited, a:link, a:active {
   padding: 8px;
 }
 
-.BigIconButtonContainer h3, .BigIconButtonContainer label {
+.BigIconButtonContainer h3,
+.BigIconButtonContainer label {
   text-align: center;
   position: relative;
   right: 16px;
@@ -674,7 +675,7 @@ a:focus, a:hover, a:visited, a:link, a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #4D4A4A;
+  background-color: #4d4a4a;
 }
 
 .SectionSideBarContainer .ButtonPrimary {
@@ -717,7 +718,8 @@ a:focus, a:hover, a:visited, a:link, a:active {
   padding-bottom: 32px;
 }
 
-.QuestionContainer input[type=text], .QuestionContainer input[type=number] {
+.QuestionContainer input[type="text"],
+.QuestionContainer input[type="number"] {
   outline: none;
   border: none;
   background-color: #f5f5f5;

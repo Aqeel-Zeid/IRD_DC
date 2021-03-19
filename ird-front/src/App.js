@@ -17,6 +17,7 @@ import CreateSection from "./components/Pages/CreateSection";
 import QuestionFormat from "./components/Pages/QuestionFormat";
 import TextQuestion from "./components/Pages/TextQuestion";
 import ChoiceQuestion from "./components/Pages/ChoiceQuestion";
+import NumberQuestion from "./components/Pages/NumberQuestion";
 import QEditor from "./components/Pages/QEditor";
 import Store from "./State/store";
 import CreateNormalSection from "./components/Pages/CreateNormalSection";
@@ -79,6 +80,14 @@ function App() {
               <TextQuestion></TextQuestion>
             </MainLayout>
           </Route>
+          <Route path="/CQ/QT/CreateNumberQuestion">
+            <MainLayout
+              Title="Create New Number Question"
+              Description="Enter Question Details"
+            >
+              <NumberQuestion />
+            </MainLayout>
+          </Route>
           <Route path="/CQ/QT/CreateChoiceQuestion">
             <MainLayout
               Title="Create New Choice Question"
@@ -88,9 +97,7 @@ function App() {
             </MainLayout>
           </Route>
           <Route path="/CQ/AS/CreateNormalSection">
-            <MainLayout
-              Title="Create Normal Section"
-            >
+            <MainLayout Title="Create Normal Section">
               <CreateNormalSection></CreateNormalSection>
             </MainLayout>
           </Route>

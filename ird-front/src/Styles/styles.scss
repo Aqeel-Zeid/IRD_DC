@@ -23,8 +23,8 @@ $bold: 700;
 
 $spacingUnit: 8px;
 
-html{
-    height: 10vh;
+html {
+  height: 10vh;
 }
 
 body {
@@ -42,23 +42,27 @@ h1 {
 }
 
 h2 {
-    font-weight: $semibold;
-    font-size: $spacingUnit * 3;
-    line-height: $spacingUnit * 4;
-    display: block;
-  }
+  font-weight: $semibold;
+  font-size: $spacingUnit * 3;
+  line-height: $spacingUnit * 4;
+  display: block;
+}
 
-h3{
+h3 {
   font-weight: $bold;
   font-size: $spacingUnit * 4;
   line-height: $spacingUnit * 5;
   display: block;
 }
 
-a{
+a {
   text-decoration: none;
   color: $color-text;
-  &:focus, &:hover, &:visited, &:link, &:active {
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
     text-decoration: none;
   }
 }
@@ -71,37 +75,34 @@ a{
   line-height: $spacingUnit * 2.5;
 }
 
-.bodyText{
-    font-weight: 600;
-    font-size: $spacingUnit * 2;
-    display: block;
+.bodyText {
+  font-weight: 600;
+  font-size: $spacingUnit * 2;
+  display: block;
 }
-
 
 .ButtonPrimary {
   background-color: $color-primary;
   color: $color-text;
   border-width: 0;
-  padding-top: $spacingUnit *1.5;
-  padding-bottom: $spacingUnit *1.5;
-  padding-left: $spacingUnit *10;
-  padding-right: $spacingUnit *10;
+  padding-top: $spacingUnit * 1.5;
+  padding-bottom: $spacingUnit * 1.5;
+  padding-left: $spacingUnit * 10;
+  padding-right: $spacingUnit * 10;
   font-family: $font-family;
   font-size: $spacingUnit * 2;
   font-weight: bold;
   width: 100%;
-
-
 }
 
 .ButtonSecondary {
   background-color: $color-secondary;
   color: $color-text;
   border-width: 0;
-  padding-top: $spacingUnit *1.5;
-  padding-bottom: $spacingUnit *1.5;
-  padding-left: $spacingUnit *10;
-  padding-right: $spacingUnit *10;
+  padding-top: $spacingUnit * 1.5;
+  padding-bottom: $spacingUnit * 1.5;
+  padding-left: $spacingUnit * 10;
+  padding-right: $spacingUnit * 10;
   font-family: $font-family;
   font-size: $spacingUnit * 2;
   font-weight: bold;
@@ -112,10 +113,10 @@ a{
   background-color: $color-background-light;
   color: $color-secondary;
   border-width: 0;
-  padding-top: $spacingUnit *1.5;
-  padding-bottom: $spacingUnit *1.5;
-  padding-left: $spacingUnit *10;
-  padding-right: $spacingUnit *10;
+  padding-top: $spacingUnit * 1.5;
+  padding-bottom: $spacingUnit * 1.5;
+  padding-left: $spacingUnit * 10;
+  padding-right: $spacingUnit * 10;
   font-family: $font-family;
   font-size: $spacingUnit * 2;
   font-weight: bold;
@@ -128,7 +129,7 @@ a{
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: $spacingUnit *2.5;
+  font-size: $spacingUnit * 2.5;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -157,7 +158,7 @@ a{
 }
 
 .CheckboxContainer input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 .checkmark:after {
@@ -252,7 +253,10 @@ a{
   flex-direction: column;
   min-width: fit-content;
   max-width: 5vw;
-  
+
+  //margin-bottom: -2000px; /* any large number will do */
+  //padding-bottom: 2000px;
+
   height: 100vh;
   position: sticky;
   top: 0;
@@ -277,7 +281,7 @@ a{
 
 .RespondentFormatLeft {
   border: 1px solid $color-primary;
-  padding: $spacingUnit *3;
+  padding: $spacingUnit * 3;
   padding-bottom: $spacingUnit * 8;
   margin-right: $spacingUnit * 3;
   grid-area: 1 / 1 / 2 / 2;
@@ -294,10 +298,10 @@ a{
 .TextQuestionContainer {
   margin-top: $spacingUnit * 6;
   display: grid;
-grid-template-columns: 1.5fr 1fr;
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .TextQuestionLeft {
@@ -311,7 +315,7 @@ grid-row-gap: 0px;
   display: flex;
   flex-direction: column;
   margin-left: $spacingUnit * 3;
-  grid-area: 1 / 2 / 2 / 3;;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .TextQuestionBottom {
@@ -326,10 +330,10 @@ grid-row-gap: 0px;
 .ChoiceQuestionContainer {
   margin-top: $spacingUnit * 6;
   display: grid;
-grid-template-columns: 1.5fr 1fr;
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .ChoiceQuestionLeft {
@@ -343,7 +347,7 @@ grid-row-gap: 0px;
   display: flex;
   flex-direction: column;
   margin-left: $spacingUnit * 3;
-  grid-area: 1 / 2 / 2 / 3;;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .ChoiceQuestionBottom {
@@ -388,77 +392,72 @@ grid-row-gap: 0px;
 .MainContainerHeaderBody {
   display: flex;
   flex-direction: column;
-  }
-  
-  .MainContainerHeader {
-    grid-area: 1 / 2 / 2 / 3;
-    padding-right: $spacingUnit * 8;
-    padding-top: $spacingUnit * 2;
-  }
-  .MainContainerBody {
-    padding-right: $spacingUnit * 8;
-    padding-left: $spacingUnit * 0.5;
-    margin-right: $spacingUnit * 4;
-    margin-top: $spacingUnit *8;
-    grid-area: 2 / 2 / 3 / 3;
-  }
-
-.NewQuestionaireButtonContainer{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img{
-        max-width: $spacingUnit * 24;
-        padding-bottom: $spacingUnit * 2;
-    }
-
-    padding: $spacingUnit * 2;
-    padding-bottom: $spacingUnit * 6;
-    padding-top: $spacingUnit * 4;
-
-    border-style: dashed;
-    border-color: $color-accent;
-    border-width: $spacingUnit * 0.25;
-    border-radius: $spacingUnit * 2;
-
-    margin-bottom: $spacingUnit * 4;
-
 }
 
-.QcardContainer{
-    color: $color-text-dark;
-    background-color: $color-background-light;
-    display: flex;
-    align-content: center;
-    padding: $spacingUnit * 1.5 ;
-    justify-content: space-between;
-    
-    margin-top: $spacingUnit * 2;
-
-    label{
-        position: relative;
-        top : $spacingUnit
-    }
-
-    img{
-        padding-left: $spacingUnit * 2;
-    }
-    
+.MainContainerHeader {
+  grid-area: 1 / 2 / 2 / 3;
+  padding-right: $spacingUnit * 8;
+  padding-top: $spacingUnit * 2;
+}
+.MainContainerBody {
+  padding-right: $spacingUnit * 8;
+  padding-left: $spacingUnit * 0.5;
+  margin-right: $spacingUnit * 4;
+  margin-top: $spacingUnit * 8;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
-.QCardArrayContainer{
+.NewQuestionaireButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: $spacingUnit * 24;
+    padding-bottom: $spacingUnit * 2;
+  }
+
+  padding: $spacingUnit * 2;
+  padding-bottom: $spacingUnit * 6;
+  padding-top: $spacingUnit * 4;
+
+  border-style: dashed;
+  border-color: $color-accent;
+  border-width: $spacingUnit * 0.25;
+  border-radius: $spacingUnit * 2;
+
+  margin-bottom: $spacingUnit * 4;
+}
+
+.QcardContainer {
+  color: $color-text-dark;
+  background-color: $color-background-light;
+  display: flex;
+  align-content: center;
+  padding: $spacingUnit * 1.5;
+  justify-content: space-between;
+
+  margin-top: $spacingUnit * 2;
+
+  label {
+    position: relative;
+    top: $spacingUnit;
+  }
+
+  img {
+    padding-left: $spacingUnit * 2;
+  }
+}
+
+.QCardArrayContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-top: $spacingUnit * 4;
 }
 
-
-.PaginationProgressContainer{
- 
-  div{
+.PaginationProgressContainer {
+  div {
     height: $spacingUnit * 3;
     width: $spacingUnit * 3;
     background-color: $color-accent;
@@ -468,16 +467,15 @@ grid-row-gap: 0px;
     margin-right: $spacingUnit;
   }
 
-  .PaginationProgressActive{
+  .PaginationProgressActive {
     background-color: $color-primary;
   }
-  .PaginationProgressPassive{
+  .PaginationProgressPassive {
     background-color: $color-accent;
   }
 }
 
-
-.BigIconButtonContainer{
+.BigIconButtonContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -486,14 +484,15 @@ grid-row-gap: 0px;
 
   padding: $spacingUnit;
 
-  h3 , label {
+  h3,
+  label {
     text-align: center;
     position: relative;
-    right:  $spacingUnit * 2;
+    right: $spacingUnit * 2;
     max-width: $spacingUnit * 30;
   }
 
-  img{
+  img {
     margin-top: $spacingUnit * 3;
     margin-bottom: $spacingUnit * 2;
     width: 100%;
@@ -502,20 +501,18 @@ grid-row-gap: 0px;
   }
 }
 
-
-.SectionSideBarContainer{
+.SectionSideBarContainer {
   max-height: fit-content;
   display: flex;
   flex-direction: column;
-  background-color: #4D4A4A;
+  background-color: #4d4a4a;
 
-  .ButtonPrimary{
+  .ButtonPrimary {
     margin-top: $spacingUnit * 4;
   }
-
 }
 
-.SectionSideBarItem{
+.SectionSideBarItem {
   padding-top: $spacingUnit * 2;
   padding-bottom: $spacingUnit;
   padding-left: $spacingUnit * 2;
@@ -523,11 +520,11 @@ grid-row-gap: 0px;
   padding-bottom: $spacingUnit * 3;
 }
 
-.SectionSideBarItemSelected{
+.SectionSideBarItemSelected {
   background-color: $color-background-dark;
 }
 
-.QuestionNumber{
+.QuestionNumber {
   height: $spacingUnit * 4;
   width: $spacingUnit * 4;
   background-color: $color-background-extra-dark;
@@ -536,7 +533,7 @@ grid-row-gap: 0px;
   display: inline-block;
   padding: $spacingUnit;
 
-  label{
+  label {
     color: $color-text;
     font-size: $spacingUnit * 2;
     font-weight: $semibold;
@@ -545,11 +542,12 @@ grid-row-gap: 0px;
   }
 }
 
-.QuestionContainer{
+.QuestionContainer {
   background-color: $color-background-light;
   padding: $spacingUnit;
   padding-bottom: $spacingUnit * 4;
-  input[type=text] , input[type=number] {
+  input[type="text"],
+  input[type="number"] {
     outline: none;
     border: none;
     background-color: $color-background-light;
@@ -560,18 +558,16 @@ grid-row-gap: 0px;
     width: 100%;
     padding-bottom: $spacingUnit;
   }
-
 }
 
-
-.QuestionHeader{
+.QuestionHeader {
   color: $color-text-dark;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: left;
-  
-  .BodyText{
+
+  .BodyText {
     flex-grow: 3;
     padding-left: $spacingUnit * 2;
     line-height: $spacingUnit * 2.5;
@@ -579,68 +575,60 @@ grid-row-gap: 0px;
     font-size: $spacingUnit * 2;
   }
 
-  .QuestionNumber{
+  .QuestionNumber {
     align-self: flex-start;
   }
-
 }
 
-
-.QuestionAndAnswerPanel{
+.QuestionAndAnswerPanel {
   text-align: left;
   flex-grow: 3;
 }
 
-.AnswerComponentContainer{
+.AnswerComponentContainer {
   padding-left: $spacingUnit * 2;
-  padding-top: $spacingUnit* 3;
-
+  padding-top: $spacingUnit * 3;
 }
 
-.QuestionControls{
-
+.QuestionControls {
   display: flex;
   justify-content: space-between;
   align-self: flex-start;
 
-  img{
+  img {
     padding-left: $spacingUnit * 0.5;
-    padding-right: $spacingUnit * 0.5;   
+    padding-right: $spacingUnit * 0.5;
     max-height: $spacingUnit * 3;
-    min-height: $spacingUnit ;
+    min-height: $spacingUnit;
   }
-
 }
 
-.Choice{
-  
+.Choice {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: baseline ;
-  
+  align-items: baseline;
+
   margin-top: $spacingUnit * 1;
 
   padding: $spacingUnit * 1;
 
-  .BodyText{
+  .BodyText {
     padding-left: $spacingUnit * 2;
     position: relative;
     top: $spacingUnit * 0.75;
-
   }
 
-  .QuestionNumber{
+  .QuestionNumber {
     background-color: $color-background-dark;
   }
 }
 
-.SelectedChoice{
+.SelectedChoice {
   background-color: $color-background-dark;
   color: $color-text;
 
-  .QuestionNumber{
+  .QuestionNumber {
     background-color: $color-primary;
   }
-
 }

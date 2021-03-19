@@ -2,7 +2,7 @@ import React from "react";
 import QuestionDivider from "../QuestionDivider";
 import BigIconButton from "../BigIconButton";
 import numberImg from "./Assets/0_9.svg";
-import calendar from "./Assets/calendar.svg";
+import table from "./Assets/table.svg";
 import decisionMaking from "./Assets/decision_making.svg";
 import font from "./Assets/font.svg";
 import testQuiz from "./Assets/test_quiz.svg";
@@ -15,36 +15,18 @@ export default function QuestionFormat() {
         IconDescription="Text Icon"
         Label="Text"
         Description="Response"
-        LinkTo = "/CQ/QT/CreateTextQuestion"
+        LinkTo="/CQ/QT/CreateTextQuestion"
       />
-      <QuestionDivider
-        ClassName="VerticalDivider"
-        ClassNameDividerLabel="VerticalDividerLabel"
-      />
-      <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}> 
-        <BigIconButton
-          Icon={decisionMaking}
-          IconDescription="Decision Icon"
-          Label="Yes / No"
-          Description="Response"
-        />
-        <BigIconButton
-          Icon={testQuiz}
-          IconDescription="Test Quiz Icon"
-          Label="Multiple Choice"
-          Description="Response"
-          LinkTo = "/CQ/QT/CreateChoiceQuestion"
-        />
-      </div>
       <QuestionDivider
         ClassName="VerticalDivider"
         ClassNameDividerLabel="VerticalDividerLabel"
       />
       <BigIconButton
-        Icon={calendar}
-        IconDescription="Calendar Icon"
-        Label="Date"
+        Icon={testQuiz}
+        IconDescription="Test Quiz Icon"
+        Label="Multiple Choice"
         Description="Response"
+        LinkTo="/CQ/QT/CreateChoiceQuestion"
       />
       <QuestionDivider
         ClassName="VerticalDivider"
@@ -54,8 +36,19 @@ export default function QuestionFormat() {
         Icon={numberImg}
         IconDescription="Number Icon"
         Label="Number"
-        Description="Response"
-        LinkTo = "/CQ/QT/CreateNumberQuestion"
+        Description="Number"
+        LinkTo="/CQ/QT/CreateNumberQuestion"
+      />
+      <QuestionDivider
+        ClassName="VerticalDivider"
+        ClassNameDividerLabel="VerticalDividerLabel"
+      />
+      <BigIconButton
+        Icon={table}
+        IconDescription="Calendar Icon"
+        Label="Table"
+        Description="Question table"
+        LinkTo="/CQ/QT/CreateTableQuestion"
       />
     </div>
   );

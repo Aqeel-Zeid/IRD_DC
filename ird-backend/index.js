@@ -109,47 +109,69 @@ app.post("/CreateNewQuestionaire", function (req, res) {
     respondent_code_format,
     qid,
     created_at,
-    sections
+    sections,
   } = req.body;
 
-  console.log(questionaireName, questionaireDescription, respondent_code_format , qid, created_at, sections )
+  console.log(
+    questionaireName,
+    questionaireDescription,
+    respondent_code_format,
+    qid,
+    created_at,
+    sections
+  );
 
-  fs.writeFileSync(`${dir}/Questionaires/${questionaireName}.json`, JSON.stringify(req.body), 'utf8' );
-
+  fs.writeFileSync(
+    `${dir}/Questionaires/${questionaireName}.json`,
+    JSON.stringify(req.body),
+    "utf8"
+  );
 
   res.send("Successfully Created").status(200);
-
 });
 
 //Update Questionaire-----------------------------
 
+app.post("/UpdateQuestionaire", function (req, res) {
+  let { updatedQuestionaire } = req.body;
+
+  console.log(updatedQuestionaire);
+
+  fs.writeFileSync(
+    `${dir}/Questionaires/${updatedQuestionaire.questionaireName}.json`,
+    JSON.stringify(updatedQuestionaire),
+    "utf8"
+  );
+
+  res.send("Successfully Updated Questionaire").status(200);
+});
+
 //Get All the questionaires-------------------
 
-app.get("/GetAllQuestionaires", (req,res) => {
+app.get("/GetAllQuestionaires", (req, res) => {
+  let Qarray = [];
 
-    let Qarray = []
+  fs.readdir(`${dir}/Questionaires`, function (err, files) {
+    //handling error
+    if (err) {
+      return console.log("Unable to scan directory: " + err);
+    }
+    //listing all files using forEach
+    files.forEach(function (file) {
+      // Do whatever you want to do with the file
+      let rawdata = fs.readFileSync(
+        `${dir}/Questionaires/${file}`,
+        "utf8",
+        (err, data) => {}
+      );
+      Qarray.push(JSON.parse(rawdata));
+      //console.log(JSON.parse(rawdata));
+    });
 
-    fs.readdir(`${dir}/Questionaires`, function (err, files) {
-      //handling error
-      if (err) {
-          return console.log('Unable to scan directory: ' + err);
-      } 
-      //listing all files using forEach
-      files.forEach(function (file) {
-          // Do whatever you want to do with the file
-          let rawdata = fs.readFileSync(`${dir}/Questionaires/${file}`, 'utf8' , (err,data) => {
-           
-          });
-          Qarray.push(JSON.parse(rawdata))
-          //console.log(JSON.parse(rawdata)); 
-      });
-
-      //console.log(Qarray)
-      res.json(Qarray).status(200);
+    //console.log(Qarray)
+    res.json(Qarray).status(200);
   });
-
-})
-
+});
 
 //Start Server-----------------------------------
 const port = 4000;
