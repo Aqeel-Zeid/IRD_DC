@@ -21,6 +21,8 @@ import NumberQuestion from "./components/Pages/NumberQuestion";
 import QEditor from "./components/Pages/QEditor";
 import Store from "./State/store";
 import CreateNormalSection from "./components/Pages/CreateNormalSection";
+import CreateSkipLogic from "./components/Pages/CreateSkipLogic";
+import CreateNewTableSection from "./components/Pages/CreateNewTableQuestion";
 
 function App() {
   return (
@@ -96,9 +98,25 @@ function App() {
               <ChoiceQuestion></ChoiceQuestion>
             </MainLayout>
           </Route>
+          <Route path="/CQ/QT/CreateTableQuestion">
+            <MainLayout
+              Title="Create New Table Question"
+              Description="Enter Question Details"
+            >
+              <CreateNewTableSection></CreateNewTableSection>
+            </MainLayout>
+          </Route>
           <Route path="/CQ/AS/CreateNormalSection">
             <MainLayout Title="Create Normal Section">
               <CreateNormalSection></CreateNormalSection>
+            </MainLayout>
+          </Route>
+          <Route path="/CQ/AS/CreateSkipLogic">
+            <MainLayout
+            bgColor="black"
+              Title="Create Skip logic Section"
+            >
+              <CreateSkipLogic></CreateSkipLogic>
             </MainLayout>
           </Route>
           <Route path="/CQ/SelectRespondentCode">

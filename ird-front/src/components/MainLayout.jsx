@@ -11,7 +11,7 @@ export default function MainLayout(props) {
       >
         <SideBar />
       </div>
-      <div className="MainContainerHeaderBody">
+      <div className="MainContainerHeaderBody" style={{ backgroundColor: props.bgColor }}>
         <div
           className="MainContainerHeader"
           style={{ backgroundColor: props.bgColor }}

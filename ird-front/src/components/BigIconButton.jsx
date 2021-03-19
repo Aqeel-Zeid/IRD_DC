@@ -8,7 +8,7 @@ export default function BigIconButton(props) {
     return (
         <div className = "BigIconButtonContainer">
             <Link to = {props.LinkTo}>
-                <img src = {props.Icon} alt = { props.IconDescription}/>
+                <img style={{ height: props.givenHeight }} src = {props.Icon} alt = { props.IconDescription}/>
                 <h3>{props.Label}</h3>
                 <label className = "TitleDescription">{ props.Description }</label>
             </Link>
