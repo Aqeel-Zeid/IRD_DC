@@ -5,7 +5,7 @@ import Checkbox from "../Checkbox";
 import Question from "../Question";
 import ChoiceAnswerComponent from "../ChoiceAnswerComponent";
 
-export default function TextQuestion() {
+export default function ChoiceQuestion() {
   return (
     <div className="ChoiceQuestionContainer">
       <div className="ChoiceQuestionLeft">
