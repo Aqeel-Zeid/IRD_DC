@@ -22,7 +22,7 @@ export default function QCardArray() {
           QCards.push(
             <QCard
               QuestionaireName={questionaire.questionaireName}
-              Date={new Date(questionaire.created_at).toLocaleDateString()}
+              Date={new Date(questionaire.created_date).toLocaleDateString()}
               key={questionaire.qid}
               OnClick={(e) => {
                 dispatch({

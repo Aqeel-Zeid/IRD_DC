@@ -79,8 +79,10 @@ export default function QRespondentFormat() {
                 payload: new Date().toISOString(),
               });
 
-              console.log(state)
-  
+              console.log(state);
+
+              let current_date = new Date();
+
               //create the questionaire in the server
               fetch("http://localhost:4000/CreateNewQuestionaire", {
                 method: "POST",
@@ -89,7 +91,7 @@ export default function QRespondentFormat() {
                   questionaireDescription: state.questionaireDescription,
                   respondent_code_format: state.respondent_code_format,
                   qid: state.qid,
-                  created_at: state.created_date,
+                  created_date: current_date,
                   selected_section: "0",
                   sections: [
                     {
