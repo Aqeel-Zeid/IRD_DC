@@ -71,37 +71,27 @@ export default function QRespondentFormat() {
             to="/CQ/QuestionaireEditor"
             onClick={async () => {
               //Set qid
-              await dispatch({ type: "SET_qid", payload: uuidv4() });
+              // await dispatch({ type: "SET_qid", payload: uuidv4() });
 
-              //set created_time
-              await dispatch({
-                type: "SET_created_date",
-                payload: new Date().toISOString(),
-              });
+              // //set created_time
+              // await dispatch({
+              //   type: "SET_created_date",
+              //   payload: new Date().toISOString(),
+              // });
 
               console.log(state);
 
-              let current_date = new Date();
-
               //create the questionaire in the server
-              fetch("http://localhost:4000/CreateNewQuestionaire", {
+              await fetch("http://localhost:4000/CreateNewQuestionaire", {
                 method: "POST",
                 body: JSON.stringify({
                   questionaireName: state.questionaireName,
                   questionaireDescription: state.questionaireDescription,
                   respondent_code_format: state.respondent_code_format,
-                  qid: state.qid,
-                  created_date: current_date,
+                  qid: uuidv4(),
+                  created_date: new Date().toString(),
                   selected_section: "0",
-                  sections: [
-                    {
-                      section_name: "General Section",
-                      is_skip_logic: "false",
-                      description: "General Information Section",
-                      order: "1",
-                      questions: [],
-                    },
-                  ],
+                  sections: [],
                 }),
                 headers: { "Content-type": "application/json; charset=UTF-8" },
               })

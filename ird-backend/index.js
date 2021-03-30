@@ -108,7 +108,7 @@ app.post("/CreateNewQuestionaire", function (req, res) {
     questionaireDescription,
     respondent_code_format,
     qid,
-    created_at,
+    created_date,
     sections,
   } = req.body;
 
@@ -117,7 +117,7 @@ app.post("/CreateNewQuestionaire", function (req, res) {
     questionaireDescription,
     respondent_code_format,
     qid,
-    created_at,
+    created_date,
     sections
   );
 

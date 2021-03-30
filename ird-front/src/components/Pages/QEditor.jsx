@@ -23,13 +23,13 @@ export default function QEditor(props) {
 
   //Update the backend when chages are made to the form
   useDeepCompareEffect(() => {
-    backEndSync(state);
+    //backEndSync(state);
   }, [state]);
 
   useEffect(() => {
     let interval = setInterval(() => {
       //console.log("Running Update");
-      backEndSync(state);
+      //backEndSync(state);
     }, 1000 * 10); // Run every 10 seconds
     return () => {
       clearInterval(interval);
@@ -44,45 +44,49 @@ export default function QEditor(props) {
 
   useEffect(() => {
     let questionArray = [];
-    state.sections[selectedSection].questions.forEach((question, index) => {
-      //Create answer component according to the question type
-      let answerComponent = <></>;
+    state.sections[selectedSection] !== undefined
+      ? state.sections[selectedSection].questions.forEach((question, index) => {
+          //Create answer component according to the question type
+          let answerComponent = <></>;
 
-      //console.log(question);
-      switch (question.type) {
-        case "TEXT":
-          answerComponent = (
-            <PlainTextAnswerComponent Placeholder={question.answer_hint} />
+          //console.log(question);
+          switch (question.type) {
+            case "TEXT":
+              answerComponent = (
+                <PlainTextAnswerComponent Placeholder={question.answer_hint} />
+              );
+              break;
+            case "NUMBER":
+              answerComponent = (
+                <PlainNumberAnswerComponent
+                  Placeholder={question.answer_hint}
+                />
+              );
+              break;
+            case "MULTIPLE_CHOICE":
+              answerComponent = (
+                <ChoiceAnswerComponent Choices={question.choices} />
+              );
+              break;
+
+            default:
+              break;
+          }
+
+          //console.log(answerComponent)
+
+          let questionComponent = (
+            <Question
+              AnswerComponent={answerComponent}
+              QuestionNumber={index + 1}
+              Label={question.label}
+              key={index}
+            />
           );
-          break;
-        case "NUMBER":
-          answerComponent = (
-            <PlainNumberAnswerComponent Placeholder={question.answer_hint} />
-          );
-          break;
-        case "MULTIPLE_CHOICE":
-          answerComponent = (
-            <ChoiceAnswerComponent Choices={question.choices} />
-          );
-          break;
 
-        default:
-          break;
-      }
-
-      //console.log(answerComponent)
-
-      let questionComponent = (
-        <Question
-          AnswerComponent={answerComponent}
-          QuestionNumber={index + 1}
-          Label={question.label}
-          key={index}
-        />
-      );
-
-      questionArray.push(questionComponent);
-    });
+          questionArray.push(questionComponent);
+        })
+      : setQuestionList(questionArray);
 
     setQuestionList(questionArray);
   }, [selectedSection]);

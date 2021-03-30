@@ -9,7 +9,7 @@ export default function SectionSideBar({
   SelectedSection,
   SetSelectedSection,
 }) {
-    const [state, dispatch] = useContext(Context);
+  const [state, dispatch] = useContext(Context);
 
   //SectionList = {state.sections} SelectedSection = {selectedSection}
   let classNameDefinition = "SectionSideBarItem";
@@ -17,7 +17,6 @@ export default function SectionSideBar({
   const [sectionList, setSectionList] = useState([]);
 
   useEffect(() => {
-
     //console.log(state.selected_section);
 
     let sList = [];
@@ -26,7 +25,7 @@ export default function SectionSideBar({
         ? (classNameDefinition =
             "SectionSideBarItem SectionSideBarItemSelected")
         : (classNameDefinition = "SectionSideBarItem");
-     
+
       sList.push(
         <div
           className={
@@ -35,14 +34,11 @@ export default function SectionSideBar({
               : "SectionSideBarItem"
           }
           key={index}
-          onClick={() =>
-            {  
-                //dispatch({ type: "SET_selected_section", payload:  index  })
-                SetSelectedSection(index)
-                //console.log(state.selected_section, index )
-            }
-                
-          }
+          onClick={() => {
+            //dispatch({ type: "SET_selected_section", payload:  index  })
+            SetSelectedSection(index);
+            //console.log(state.selected_section, index )
+          }}
         >
           {section.section_name}
         </div>
@@ -52,13 +48,18 @@ export default function SectionSideBar({
     setSectionList(sList);
   }, [state.selected_section]);
 
-  useEffect(() => {}, [sectionList]);
+  useEffect(() => {
+    // console.log(
+    //   SectionList[0].section_name === "" ||
+    //     SectionList[0].section_name === undefined
+    // );
+  }, [sectionList]);
 
   return (
     <div className="SectionSideBarContainer">
       {sectionList}
-      <Link to = "/CQ/AS/AddSection">
-          <ButtonMain Text="Add Section" ClassName="ButtonPrimary" />
+      <Link to="/CQ/AS/AddSection">
+        <ButtonMain Text="Add Section" ClassName="ButtonPrimary" />
       </Link>
     </div>
   );
