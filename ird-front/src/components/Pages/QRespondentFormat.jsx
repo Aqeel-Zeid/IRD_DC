@@ -70,17 +70,6 @@ export default function QRespondentFormat() {
           <Link
             to="/CQ/QuestionaireEditor"
             onClick={async () => {
-              //Set qid
-              // await dispatch({ type: "SET_qid", payload: uuidv4() });
-
-              // //set created_time
-              // await dispatch({
-              //   type: "SET_created_date",
-              //   payload: new Date().toISOString(),
-              // });
-
-              console.log(state);
-
               //create the questionaire in the server
               await fetch("http://localhost:4000/CreateNewQuestionaire", {
                 method: "POST",

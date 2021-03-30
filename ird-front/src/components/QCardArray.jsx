@@ -1,12 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import QCard from "./QCard";
 
 import { Context } from "../State/store";
 
 export default function QCardArray() {
   const [state, dispatch] = useContext(Context);
-
   const [qCards, setQCards] = useState([]);
 
   useEffect(() => {
@@ -32,6 +30,8 @@ export default function QCardArray() {
               }}
             />
           );
+
+          return 0;
         });
 
         setQCards(QCards);
