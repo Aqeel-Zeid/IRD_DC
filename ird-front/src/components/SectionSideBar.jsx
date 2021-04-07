@@ -57,6 +57,37 @@ export default function SectionSideBar({
 
   return (
     <div className="SectionSideBarContainer">
+      <a
+        class="ButtonPrimary"
+        href={`http://localhost:4000/downloadQuestionaire/${state.questionaireName}`}
+        download="questionaire"
+      >
+        Export Questionaire
+      </a>
+      {/* <ButtonMain
+        Text="Export Questionaire"
+        ClassName="ButtonPrimary"
+        OnClickMethod={() => {
+          // fetch(
+          //   `http://localhost:4000/downloadQuestionaire/${state.questionaireName}`,
+          //   {
+          //     method: "GET",
+          //   }
+          // )
+          //   .then((res) => {
+          //     console.log("Success:", res);
+          //   })
+          //   .then((data) => {
+          //     console.log(data  );
+          //   })
+          //   .catch((error) => {
+          //     console.error("Error:", error);
+          //   });
+
+        
+
+        }}
+      /> */}
       {sectionList}
       <Link to="/CQ/AS/AddSection">
         <ButtonMain Text="Add Section" ClassName="ButtonPrimary" />

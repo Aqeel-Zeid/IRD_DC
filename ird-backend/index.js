@@ -34,7 +34,7 @@ const cors = require("cors");
 let app = express();
 
 //Enable Cross-Origin Request
-app.use(cors());
+app.use(cors({ credentials: true, origin: true }));
 
 // support parsing of application/json type post data
 var bodyParser = require("body-parser");
@@ -171,6 +171,11 @@ app.get("/GetAllQuestionaires", (req, res) => {
     //console.log(Qarray)
     res.json(Qarray).status(200);
   });
+});
+
+app.get("/downloadQuestionaire/:questionnaireName", function (req, res) {
+  const file = `${dir}/Questionaires/${req.params.questionnaireName}.json`;
+  res.download(file); // Set disposition and send it.
 });
 
 //Start Server-----------------------------------

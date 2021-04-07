@@ -14,7 +14,7 @@ export default function QuestionFormat() {
         Icon={font}
         IconDescription="Text Icon"
         Label="Text"
-        Description="Response"
+        Description="Free Range Text Responses"
         LinkTo="/CQ/QT/CreateTextQuestion"
       />
       <QuestionDivider
@@ -24,8 +24,8 @@ export default function QuestionFormat() {
       <BigIconButton
         Icon={testQuiz}
         IconDescription="Test Quiz Icon"
-        Label="Multiple Choice"
-        Description="Response"
+        Label="Choice"
+        Description="Select from a Pre-defined set of Responses"
         LinkTo="/CQ/QT/CreateChoiceQuestion"
       />
       <QuestionDivider
@@ -36,7 +36,7 @@ export default function QuestionFormat() {
         Icon={numberImg}
         IconDescription="Number Icon"
         Label="Number"
-        Description="Number"
+        Description="For Numeric Inputs"
         LinkTo="/CQ/QT/CreateNumberQuestion"
       />
       <QuestionDivider
